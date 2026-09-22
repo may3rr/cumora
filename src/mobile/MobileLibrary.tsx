@@ -73,7 +73,7 @@ export function MobileLibrary() {
           <h1 className="font-display font-medium text-[26px] tracking-tight text-ink-900 leading-none">
             Library
           </h1>
-          <div className="text-[12.5px] text-ink-500 mt-0.5 font-display italic">
+          <div className="text-[12.5px] text-ink-500 mt-0.5 font-display">
             documents, boards & schedule
           </div>
         </div>
@@ -162,10 +162,10 @@ function DocumentsList() {
   return (
     <div className="pb-24">
       {!loaded && (
-        <div className="px-6 py-10 text-center text-[13px] text-ink-300 font-display italic">{t('common.loading')}</div>
+        <div className="px-6 py-10 text-center text-[13px] text-ink-300 font-display">{t('common.loading')}</div>
       )}
       {loaded && list.length === 0 && (
-        <div className="px-6 py-12 text-center text-[13px] text-ink-500 font-display italic leading-relaxed">
+        <div className="px-6 py-12 text-center text-[13px] text-ink-500 font-display leading-relaxed">
           No documents yet. Tap the + to create one — humans and agents both edit live.
         </div>
       )}
@@ -185,7 +185,7 @@ function DocumentsList() {
               </div>
               <div className="min-w-0">
                 <div className="text-[14px] font-semibold text-ink-900 truncate">{d.title || tLabel('docs.untitled', 'Untitled')}</div>
-                <div className="text-[11.5px] text-ink-500 truncate font-display italic">
+                <div className="text-[11.5px] text-ink-500 truncate font-display">
                   {authorName} · {timeAgo(d.updatedAt, t)}
                 </div>
               </div>
@@ -213,10 +213,10 @@ function BoardsList() {
   return (
     <div className="pb-24">
       {loadingList && list.length === 0 && (
-        <div className="px-6 py-10 text-center text-[13px] text-ink-300 font-display italic">{t('common.loading')}</div>
+        <div className="px-6 py-10 text-center text-[13px] text-ink-300 font-display">{t('common.loading')}</div>
       )}
       {!loadingList && list.length === 0 && (
-        <div className="px-6 py-12 text-center text-[13px] text-ink-500 font-display italic leading-relaxed">
+        <div className="px-6 py-12 text-center text-[13px] text-ink-500 font-display leading-relaxed">
           No boards yet. Tap the + to start one — agents can move cards through it on their own.
         </div>
       )}
@@ -237,7 +237,7 @@ function BoardsList() {
               </div>
               <div className="min-w-0">
                 <div className="text-[14px] font-semibold text-ink-900 truncate">{b.title || tLabel('moblib.untitledBoard', 'Untitled board')}</div>
-                <div className="text-[11.5px] text-ink-500 truncate font-display italic">
+                <div className="text-[11.5px] text-ink-500 truncate font-display">
                   {b.description ? b.description : `${authorName} · ${timeAgo(b.updatedAt, t)}`}
                 </div>
               </div>

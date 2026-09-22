@@ -28,7 +28,7 @@ export class ErrorBoundary extends Component<Props, State> {
               style={{ letterSpacing: '-0.025em' }}>
               {t('errorBoundary.somethingCracked')}
             </div>
-            <div className="font-display italic text-[14px] text-ink-500 leading-relaxed mb-5">
+            <div className="font-display text-[14px] text-ink-500 leading-relaxed mb-5">
               {t('errorBoundary.fallbackBody')}
             </div>
             <pre

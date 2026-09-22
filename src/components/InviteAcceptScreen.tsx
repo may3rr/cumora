@@ -225,7 +225,7 @@ export function InviteAcceptScreen({ token, onDone }: Props) {
         )}
 
         {!joinedCompany && !preview && !previewErr && (
-          <div className="text-[13px] text-ink-400 italic font-display">{t('inviteAccept.checking')}</div>
+          <div className="text-[13px] text-ink-400 font-display">{t('inviteAccept.checking')}</div>
         )}
 
         {!joinedCompany && preview && preview.status === 'not_found' && (
@@ -263,7 +263,7 @@ export function InviteAcceptScreen({ token, onDone }: Props) {
         {!joinedCompany && preview && preview.status === 'wrong_email' && inv && (
           <div className="flex flex-col items-center gap-4 text-center">
             <h1 className="font-display text-[20px] text-ink-900">{t('inviteAccept.wrongAccount')}</h1>
-            <p className="text-[13px] text-ink-500 font-display italic leading-relaxed">
+            <p className="text-[13px] text-ink-500 font-display leading-relaxed">
               {t('inviteAccept.wrongAccountBody', {
                 company: companyName,
                 email: inv.email ?? '',
@@ -293,14 +293,14 @@ export function InviteAcceptScreen({ token, onDone }: Props) {
         {!joinedCompany && preview && preview.status === 'valid' && inv && (
           <div className="flex flex-col items-center gap-5 text-center w-full">
             <div className="space-y-1">
-              <div className="text-[12.5px] text-ink-400 font-display italic">
+              <div className="text-[12.5px] text-ink-400 font-display">
                 {t('inviteAccept.invitedBy', { name: inviter })}
               </div>
               <h1 className="font-display text-[24px] tracking-tight text-ink-900">
                 {companyName}
               </h1>
               {inv.note && (
-                <div className="text-[12.5px] text-ink-500 font-display italic mt-2 px-3 py-2 rounded-[10px]"
+                <div className="text-[12.5px] text-ink-500 font-display mt-2 px-3 py-2 rounded-[10px]"
                      style={{ background: 'var(--cloud)' }}>
                   "{inv.note}"
                 </div>
@@ -324,7 +324,7 @@ export function InviteAcceptScreen({ token, onDone }: Props) {
                 <button
                   type="button"
                   onClick={() => { clearPendingInvite(); onDone() }}
-                  className="text-[12px] text-ink-400 hover:text-ink-700 transition font-display italic"
+                  className="text-[12px] text-ink-400 hover:text-ink-700 transition font-display"
                 >{t('inviteAccept.notNow')}</button>
               </>
             )}
@@ -372,7 +372,7 @@ function JoinedSuccessBlock({ companyName, onContinueInBrowser }: {
         <h1 className="font-display text-[22px] tracking-tight text-ink-900">
           {t('inviteAccept.welcomeTo', { name: companyName })}
         </h1>
-        <p className="text-[12.5px] text-ink-500 font-display italic">
+        <p className="text-[12.5px] text-ink-500 font-display">
           {t('inviteAccept.welcomeBody')}
         </p>
       </div>
@@ -391,7 +391,7 @@ function JoinedSuccessBlock({ companyName, onContinueInBrowser }: {
           <button
             type="button"
             onClick={onContinueInBrowser}
-            className="text-[12px] text-ink-400 hover:text-ink-700 transition font-display italic mt-1"
+            className="text-[12px] text-ink-400 hover:text-ink-700 transition font-display mt-1"
           >{t('inviteAccept.continueInBrowser')}</button>
         )}
       </div>
@@ -413,7 +413,7 @@ function AlreadyMemberBlock({ companyName, onSwitchInBrowser }: {
   return (
     <div className="flex flex-col items-center gap-5 text-center w-full">
       <h1 className="font-display text-[20px] text-ink-900">{t('inviteAccept.alreadyIn', { name: companyName })}</h1>
-      <p className="text-[12.5px] text-ink-500 font-display italic -mt-2">
+      <p className="text-[12.5px] text-ink-500 font-display -mt-2">
         {t('inviteAccept.alreadyInBody')}
       </p>
       <div className="w-full flex flex-col gap-2.5">
@@ -431,7 +431,7 @@ function AlreadyMemberBlock({ companyName, onSwitchInBrowser }: {
           <button
             type="button"
             onClick={onSwitchInBrowser}
-            className="text-[12px] text-ink-400 hover:text-ink-700 transition font-display italic mt-1"
+            className="text-[12px] text-ink-400 hover:text-ink-700 transition font-display mt-1"
           >{t('inviteAccept.continueInBrowser')}</button>
         )}
       </div>
@@ -445,7 +445,7 @@ function ErrorBlock({ title, body, onDismiss }: { title: string; body: string; o
   return (
     <div className="flex flex-col items-center gap-4 text-center">
       <h1 className="font-display text-[20px] text-ink-900">{title}</h1>
-      <p className="text-[13px] text-ink-500 font-display italic leading-relaxed">{body}</p>
+      <p className="text-[13px] text-ink-500 font-display leading-relaxed">{body}</p>
       {tokenStr && onDismiss && (
         <button
           type="button"
@@ -488,7 +488,7 @@ function SignInToAccept({ token }: { token: string }) {
   }
   return (
     <div className="w-full flex flex-col gap-2.5">
-      <div className="text-[12.5px] text-ink-500 font-display italic text-center">
+      <div className="text-[12.5px] text-ink-500 font-display text-center">
         {t('auth.signInToAccept')}
       </div>
       <button
@@ -509,10 +509,10 @@ function SignInToAccept({ token }: { token: string }) {
         <GitHubMark />
         {busy === 'github' ? t('auth.redirecting') : t('auth.continueWithGithub')}
       </button>
-      <div className="text-[10.5px] text-ink-300 text-center font-display italic">
+      <div className="text-[10.5px] text-ink-300 text-center font-display">
         {t('auth.providerNote')}
       </div>
-      <div className="text-[11.5px] text-ink-400 text-center font-display italic pt-1">
+      <div className="text-[11.5px] text-ink-400 text-center font-display pt-1">
         {t('inviteAccept.getCumoraPre')}
         <GetDesktopAppLink variant="text" label={t('inviteAccept.getCumora')} />
       </div>

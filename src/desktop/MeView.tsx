@@ -87,7 +87,7 @@ function ProfileTab() {
             : <div className="w-[88px] h-[88px] rounded-full bg-ink-100" />}
           <div className="flex-1 min-w-0">
             <h2 className="font-display font-medium text-[26px] tracking-tight truncate" style={{ letterSpacing: '-0.02em' }}>{authUser.name}</h2>
-            <div className="font-display italic text-[14px] text-ink-500 truncate">{authUser.email}</div>
+            <div className="font-display text-[14px] text-ink-500 truncate">{authUser.email}</div>
             <div className="flex items-center gap-2 mt-3 flex-wrap">
               {providers.map((p) => (
                 <span key={p} className="text-[11px] uppercase tracking-wider px-2 py-0.5 rounded-full bg-paper text-ink-700" style={{ border: '1px solid var(--ink-100)' }}>
@@ -104,7 +104,7 @@ function ProfileTab() {
           style={{ border: '1px solid var(--ink-100)' }}>
           <div className="min-w-0">
             <div className="font-display text-[14px] text-ink-800">{t('me.sessionTitle', { server: serverOrigin })}</div>
-            <div className="font-display italic text-[12px] text-ink-400 mt-0.5">
+            <div className="font-display text-[12px] text-ink-400 mt-0.5">
               {t('me.sessionHint')}
             </div>
           </div>
@@ -135,7 +135,7 @@ function CommunitySection() {
         style={{ border: '1px solid var(--ink-100)' }}>
         <div className="min-w-0">
           <div className="font-display text-[14px] text-ink-800">{t('me.communityTitle')}</div>
-          <div className="font-display italic text-[12px] text-ink-400 mt-0.5">
+          <div className="font-display text-[12px] text-ink-400 mt-0.5">
             {t('me.communityHint')}
           </div>
         </div>
@@ -183,7 +183,7 @@ function AboutSection() {
         style={{ border: '1px solid var(--ink-100)' }}>
         <div className="min-w-0">
           <div className="font-display text-[14px] text-ink-800">{t('me.versionLine', { version })}</div>
-          <div className="font-display italic text-[12px] text-ink-400 mt-0.5">
+          <div className="font-display text-[12px] text-ink-400 mt-0.5">
             {supported ? t('me.autoUpdateDaily') : t('me.autoUpdateUnsupported')}
           </div>
         </div>
@@ -294,7 +294,7 @@ function QuotaCard({ period, label, sub, window }: {
         />
       </div>
       <div className="flex items-center justify-between text-[11px]">
-        <span className="font-display italic text-ink-400">{t(sub)}</span>
+        <span className="font-display text-ink-400">{t(sub)}</span>
         {resets && <span className="font-mono text-ink-500">{resets}</span>}
       </div>
     </div>
@@ -326,7 +326,7 @@ function UsageTab() {
               <div key={p.key} className="bg-cloud rounded-[14px] p-5 h-[140px]"
                 style={{ border: '1px solid var(--ink-100)' }}>
                 <div className="font-display font-semibold text-[14px] text-ink-300">{t(p.label)}</div>
-                <div className="font-display italic text-[12px] text-ink-300 mt-2">{t('common.loading')}</div>
+                <div className="font-display text-[12px] text-ink-300 mt-2">{t('common.loading')}</div>
               </div>
             ))}
           </div>
@@ -342,7 +342,7 @@ function UsageTab() {
           <div className="bg-cloud rounded-[14px] p-6 text-center"
             style={{ border: '1px solid var(--ink-100)' }}>
             <div className="font-display text-[14px] text-ink-700 mb-1">{t('me.quotaFetchFailed')}</div>
-            <div className="font-display italic text-[12px] text-coral-deep mb-3">{state.message}</div>
+            <div className="font-display text-[12px] text-coral-deep mb-3">{state.message}</div>
             <button type="button" onClick={load}
               className="px-4 py-1.5 rounded-[8px] text-[12px] font-semibold text-white"
               style={{ background: 'var(--skype)' }}>
@@ -363,7 +363,7 @@ function UsageTab() {
           <div className="bg-cloud rounded-[14px] p-6"
             style={{ border: '1px dashed var(--ink-100)' }}>
             <div className="font-display text-[14px] text-ink-700">{t('me.noQuotaGateway')}</div>
-            <div className="font-display italic text-[12px] text-ink-500 mt-1 max-w-xl">
+            <div className="font-display text-[12px] text-ink-500 mt-1 max-w-xl">
               {t('me.noQuotaHint')}
             </div>
           </div>
@@ -381,7 +381,7 @@ function UsageTab() {
             <div className="font-display text-[14px] text-ink-700">
               {error ? t('me.quotaUnreachable') : t('me.noActiveSub')}
             </div>
-            <div className="font-display italic text-[12px] text-ink-500 mt-1 max-w-xl">
+            <div className="font-display text-[12px] text-ink-500 mt-1 max-w-xl">
               {error ? t('me.quotaGatewayUnreachHint') : t('me.subNotProvisioned')}
             </div>
             <button type="button" onClick={load}
@@ -398,7 +398,7 @@ function UsageTab() {
   return (
     <div className="space-y-6">
       <Section title={t('me.sectionQuota')}>
-        <div className="text-[13px] text-ink-500 leading-[1.55] mb-4 max-w-2xl font-display italic">
+        <div className="text-[13px] text-ink-500 leading-[1.55] mb-4 max-w-2xl font-display">
           {t('me.quotaIntro')}
           {snapshot.groupName ? <> {t('me.quotaIntroPlan', { plan: snapshot.groupName })}</> : null}
         </div>
@@ -419,7 +419,7 @@ function UsageTab() {
             style={{ border: '1px solid var(--ink-100)' }}>
             {t('me.refresh')}
           </button>
-          {error && <span className="text-[11.5px] text-coral-deep font-display italic">{t('me.refreshFailed', { msg: error })}</span>}
+          {error && <span className="text-[11.5px] text-coral-deep font-display">{t('me.refreshFailed', { msg: error })}</span>}
         </div>
       </Section>
     </div>
@@ -436,7 +436,7 @@ function TrustTab() {
   return (
     <div className="space-y-6">
       <Section title={t('me.sectionPerAgent')}>
-        <div className="text-[13px] text-ink-500 leading-[1.55] mb-4 max-w-2xl font-display italic">
+        <div className="text-[13px] text-ink-500 leading-[1.55] mb-4 max-w-2xl font-display">
           {t('me.perAgentIntro')}
         </div>
         <div className="space-y-2">
@@ -449,7 +449,7 @@ function TrustTab() {
                   <Avatar p={a} size={36} showStatus={false} />
                   <div className="min-w-0">
                     <div className="font-bold text-[13.5px] text-ink-900 truncate">{a.name}</div>
-                    <div className="font-display italic text-[11.5px] text-ink-500 truncate">{a.role}</div>
+                    <div className="font-display text-[11.5px] text-ink-500 truncate">{a.role}</div>
                   </div>
                 </div>
                 <div className="min-w-0">
@@ -542,13 +542,13 @@ function ProjectsTab() {
   return (
     <div className="space-y-6">
       <Section title={t('me.sectionProjects')}>
-        <div className="text-[13px] text-ink-500 leading-[1.55] mb-4 max-w-2xl font-display italic">
+        <div className="text-[13px] text-ink-500 leading-[1.55] mb-4 max-w-2xl font-display">
           {t('me.projectsIntro')}
         </div>
 
         <div className="space-y-2">
           {visible.length === 0 && !creating && (
-            <div className="bg-cloud rounded-[12px] p-6 text-center text-[13px] text-ink-500 italic font-display"
+            <div className="bg-cloud rounded-[12px] p-6 text-center text-[13px] text-ink-500 font-display"
               style={{ border: '1px dashed var(--ink-100)' }}>
               {t('me.noProjects')}
             </div>
@@ -564,7 +564,7 @@ function ProjectsTab() {
                     <div className="font-semibold text-[14px] text-ink-900 truncate">{p.name}</div>
                     {p.status === 'archived' && <span className="text-[10px] text-ink-300 uppercase tracking-wider">{t('me.archived')}</span>}
                   </div>
-                  <div className="font-display italic text-[12px] text-ink-500 truncate">
+                  <div className="font-display text-[12px] text-ink-500 truncate">
                     {p.description || t('me.noDescription')}  ·  {count === 1 ? t('me.projectConvoCount', { n: count }) : t('me.projectConvoCountPlural', { n: count })}
                   </div>
                 </div>
@@ -627,7 +627,7 @@ function ProjectsTab() {
               <button
                 type="button"
                 onClick={() => setShowArchived((v) => !v)}
-                className="text-[11.5px] text-ink-500 hover:text-skype-deep transition italic font-display"
+                className="text-[11.5px] text-ink-500 hover:text-skype-deep transition font-display"
               >
                 {showArchived ? t('me.hideArchived') : t('me.showArchivedCount', { n: archivedCount })}
               </button>
@@ -666,7 +666,7 @@ function PreferencesTab() {
                 <div key={i} className="flex items-center gap-4 p-4 cursor-pointer" onClick={() => setPref(it.key, !on)}>
                   <div className="flex-1 min-w-0">
                     <div className="font-semibold text-[13px] text-ink-900">{t(it.lbl)}</div>
-                    <div className="font-display italic font-normal text-[11.5px] text-ink-500 mt-0.5">{t(it.sub)}</div>
+                    <div className="font-display font-normal text-[11.5px] text-ink-500 mt-0.5">{t(it.sub)}</div>
                   </div>
                   <span className={cn('w-9 h-5 rounded-full relative shrink-0 transition-colors', on ? 'bg-skype' : 'bg-ink-200')}>
                     <span className={cn('absolute w-4 h-4 bg-white rounded-full top-0.5 transition-all', on ? 'left-[18px]' : 'left-0.5')}
@@ -706,7 +706,7 @@ function LanguageSection() {
         style={{ border: '1px solid var(--ink-100)' }}>
         <div className="flex-1 min-w-0">
           <div className="font-semibold text-[13px] text-ink-900">{t('common.language')}</div>
-          <div className="font-display italic font-normal text-[11.5px] text-ink-500 mt-0.5">
+          <div className="font-display font-normal text-[11.5px] text-ink-500 mt-0.5">
             {t('common.languageSub')}
           </div>
         </div>
@@ -724,7 +724,7 @@ function AppearanceSection() {
         style={{ border: '1px solid var(--ink-100)' }}>
         <div className="flex-1 min-w-0">
           <div className="font-semibold text-[13px] text-ink-900">{t('common.appearance')}</div>
-          <div className="font-display italic font-normal text-[11.5px] text-ink-500 mt-0.5">
+          <div className="font-display font-normal text-[11.5px] text-ink-500 mt-0.5">
             {t('common.appearanceSub')}
           </div>
         </div>
@@ -734,7 +734,7 @@ function AppearanceSection() {
         style={{ border: '1px solid var(--ink-100)' }}>
         <div className="flex-1 min-w-0">
           <div className="font-semibold text-[13px] text-ink-900">{t('common.chatLayout')}</div>
-          <div className="font-display italic font-normal text-[11.5px] text-ink-500 mt-0.5">
+          <div className="font-display font-normal text-[11.5px] text-ink-500 mt-0.5">
             {t('common.chatLayoutSub')}
           </div>
         </div>
@@ -759,7 +759,7 @@ function SkypeSoundSection() {
         <div className="flex items-center gap-4 p-4 cursor-pointer" onClick={() => setMuted(on)}>
           <div className="flex-1 min-w-0">
             <div className="font-semibold text-[13px] text-ink-900">{t('me.prefs.skypeSounds')}</div>
-            <div className="font-display italic font-normal text-[11.5px] text-ink-500 mt-0.5">
+            <div className="font-display font-normal text-[11.5px] text-ink-500 mt-0.5">
               {t('me.prefs.skypeSoundsSub')}
             </div>
           </div>
@@ -1291,7 +1291,7 @@ function ComputersTab() {
                 )}
                 {expanded && (
                   <div className="px-4 pb-4 pt-3 border-t border-ink-100">
-                    <div className="text-[12px] text-ink-500 mb-2 italic font-display">
+                    <div className="text-[12px] text-ink-500 mb-2 font-display">
                       {t('me.repairHint', { name: c.name })}
                     </div>
                     {!repairCode ? (
@@ -1319,7 +1319,7 @@ function ComputersTab() {
               {t('me.runOnHost')}
             </div>
             {/* biome-ignore lint/security/noDangerouslySetInnerHtml: static copy from the locale bundle, not user input */}
-            <div className="text-[11.5px] text-ink-500 mb-2.5 italic font-display" dangerouslySetInnerHTML={{ __html: t('me.engineRequired') }} />
+            <div className="text-[11.5px] text-ink-500 mb-2.5 font-display" dangerouslySetInnerHTML={{ __html: t('me.engineRequired') }} />
             <div className="mb-2.5">
               <div className="flex items-center gap-2.5 min-w-0">
                 <span className="text-[12px] text-ink-500 shrink-0">{t('me.engineLabel')}</span>
@@ -1479,7 +1479,7 @@ export function MeView() {
           <h1 className="font-display font-medium text-[36px] tracking-tight text-ink-900 mb-1" style={{ letterSpacing: '-0.025em' }}>
             {t('me.headline')}
           </h1>
-          <div className="font-display italic font-normal text-[15px] text-ink-500">
+          <div className="font-display font-normal text-[15px] text-ink-500">
             {t('me.subtitle')}
           </div>
         </div>

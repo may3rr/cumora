@@ -78,7 +78,7 @@ export function MobileParticipantInfo() {
       <section className="flex flex-col h-full overflow-hidden bg-paper">
         <DeepHeader title={tLabel('mpinfo.profileTitle', 'Profile')} onBack={close} />
         <div className="flex-1 grid place-items-center px-8 text-center">
-          <div className="font-display italic text-[13px] text-ink-500">
+          <div className="font-display text-[13px] text-ink-500">
             {(() => {
               // Wrap the rendered {me} label (e.g. '我的') in a styled
               // <span> so the call-to-action still pops in zh-CN, where
@@ -170,7 +170,7 @@ export function MobileParticipantInfo() {
           >
             {p.name}
           </h2>
-          <div className="font-display italic text-[13px] text-ink-500 mb-2.5">
+          <div className="font-display text-[13px] text-ink-500 mb-2.5">
             {subtitle}
           </div>
           <div className="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full bg-cloud border border-ink-100 text-[11.5px] text-ink-700">
@@ -265,7 +265,7 @@ export function MobileParticipantInfo() {
         {isAgent && p.bio && (
           <Section title={tLabel('mpinfo.sectionAbout', `About ${p.name}`, { name: p.name })}>
             <div
-              className="py-3 px-3.5 rounded-r-[10px] font-display italic font-normal text-[13.5px] leading-[1.55] text-ink-700"
+              className="py-3 px-3.5 rounded-r-[10px] font-display font-normal text-[13.5px] leading-[1.55] text-ink-700"
               style={{
                 background: 'linear-gradient(135deg, var(--sky-50), transparent)',
                 borderLeft: '2px solid var(--skype)',
@@ -299,7 +299,7 @@ function DeepHeader({ title, onBack }: { title: string; onBack: () => void }) {
         >
           <IBack className="w-[18px] h-[18px]" />
         </button>
-        <span className="font-display italic text-[15px] text-ink-700 truncate flex-1">
+        <span className="font-display text-[15px] text-ink-700 truncate flex-1">
           {title}
         </span>
       </div>

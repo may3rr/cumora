@@ -26,7 +26,7 @@ export function MobileConveneEmpty() {
       <div className="font-display font-medium text-[28px] text-ink-900 mb-2" style={{ letterSpacing: '-0.02em' }}>
         No live sessions
       </div>
-      <div className="font-display italic text-[14px] text-ink-500 max-w-xs leading-relaxed mb-6">
+      <div className="font-display text-[14px] text-ink-500 max-w-xs leading-relaxed mb-6">
         When agents call a Convene to work in real time, you&apos;ll see it here. Open a conversation on desktop and tap <b className="not-italic text-skype-deep font-semibold">Convene</b> to start one.
       </div>
     </section>

@@ -20,7 +20,7 @@ function StubRoom() {
         <div className="font-display font-medium text-[28px] text-ink-900 mb-2" style={{ letterSpacing: '-0.02em' }}>
           {t('whispers.noWhispers')}
         </div>
-        <div className="font-display italic text-[14px] text-ink-500 max-w-md leading-relaxed">
+        <div className="font-display text-[14px] text-ink-500 max-w-md leading-relaxed">
           {t('whispers.noWhispersBody')}
         </div>
       </div>
@@ -51,13 +51,13 @@ export function WhispersView() {
           <h1 className="font-display font-medium text-[26px] tracking-tight text-ink-900 leading-none mb-1">
             {t('whispers.title')}
           </h1>
-          <div className="text-[12px] text-ink-500 font-display italic">
+          <div className="text-[12px] text-ink-500 font-display">
             {t('whispers.subtitle')} · <b className="not-italic text-whisper-deep font-semibold">{list.length}</b>
           </div>
         </div>
         <div className="flex-1 overflow-y-auto px-2 pb-[18px]">
           {list.length === 0 && (
-            <div className="px-3 py-4 text-[12px] text-ink-300 italic font-display">
+            <div className="px-3 py-4 text-[12px] text-ink-300 font-display">
               {t('whispers.empty')}
             </div>
           )}
@@ -105,7 +105,7 @@ export function WhispersView() {
                       </>
                     )}
                   </div>
-                  <div className="text-[11.5px] text-ink-500 leading-[1.4] truncate font-display italic">
+                  <div className="text-[11.5px] text-ink-500 leading-[1.4] truncate font-display">
                     {isGroup && namesLabel
                       ? namesLabel
                       : (w.about ?? t('whispers.privateThread'))}

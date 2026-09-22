@@ -96,10 +96,10 @@ export function MobileMe() {
         <h2 className="font-display font-medium text-[28px] tracking-tight text-ink-900 leading-[1.1]" style={{ letterSpacing: '-0.028em' }}>
           {me.name}
         </h2>
-        <div className="font-display italic text-[13px] text-ink-500 mt-0.5 mb-2.5">
+        <div className="font-display text-[13px] text-ink-500 mt-0.5 mb-2.5">
           {authUser?.email ?? t('mobileMe.defaultRole')}
         </div>
-        <div className="font-display italic text-[12.5px] text-ink-700 max-w-[280px] mx-auto leading-snug">
+        <div className="font-display text-[12.5px] text-ink-700 max-w-[280px] mx-auto leading-snug">
           {stewardLine}
         </div>
         {activeCompany && (
@@ -125,7 +125,7 @@ export function MobileMe() {
               className="text-center bg-cloud rounded-[12px] py-5 px-4"
               style={{ border: '1px dashed var(--ink-100)' }}
             >
-              <div className="font-display italic text-[13px] text-ink-500 leading-snug">
+              <div className="font-display text-[13px] text-ink-500 leading-snug">
                 {t('mobileMe.quietWorkspace')}
               </div>
             </div>
@@ -146,7 +146,7 @@ export function MobileMe() {
                       <Avatar p={a} size={36} />
                       <div className="min-w-0 flex-1">
                         <div className="text-[13px] font-semibold text-ink-900 leading-tight truncate">{a.name}</div>
-                        <div className="font-display italic text-[10.5px] text-ink-500 leading-tight truncate">
+                        <div className="font-display text-[10.5px] text-ink-500 leading-tight truncate">
                           {a.role ?? 'agent'}
                         </div>
                       </div>
@@ -191,7 +191,7 @@ export function MobileMe() {
                 >
                   <div className="flex-1 min-w-0">
                     <div className="font-semibold text-[13px] text-ink-900 leading-tight">{t(it.lbl)}</div>
-                    <div className="font-display italic text-[11px] text-ink-500 mt-0.5">{t(it.sub)}</div>
+                    <div className="font-display text-[11px] text-ink-500 mt-0.5">{t(it.sub)}</div>
                   </div>
                   <span className={cn('w-9 h-5 rounded-full relative shrink-0 transition-colors', on ? 'bg-skype' : 'bg-ink-200')}>
                     <span className={cn('absolute w-4 h-4 bg-white rounded-full top-0.5 transition-all', on ? 'left-[18px]' : 'left-0.5')}
@@ -208,7 +208,7 @@ export function MobileMe() {
             style={{ border: '1px solid var(--ink-100)' }}>
             <div className="flex-1 min-w-0">
               <div className="font-semibold text-[13px] text-ink-900 leading-tight">{t('common.language')}</div>
-              <div className="font-display italic text-[11px] text-ink-500 mt-0.5">{t('common.languageSub')}</div>
+              <div className="font-display text-[11px] text-ink-500 mt-0.5">{t('common.languageSub')}</div>
             </div>
             <LanguagePicker className="w-[140px] shrink-0" />
           </div>
@@ -219,7 +219,7 @@ export function MobileMe() {
             style={{ border: '1px solid var(--ink-100)' }}>
             <div className="flex-1 min-w-0">
               <div className="font-semibold text-[13px] text-ink-900 leading-tight">{t('common.appearance')}</div>
-              <div className="font-display italic text-[11px] text-ink-500 mt-0.5">{t('common.appearanceSub')}</div>
+              <div className="font-display text-[11px] text-ink-500 mt-0.5">{t('common.appearanceSub')}</div>
             </div>
             <AppearancePicker className="w-[140px] shrink-0" />
           </div>
@@ -227,7 +227,7 @@ export function MobileMe() {
             style={{ border: '1px solid var(--ink-100)' }}>
             <div className="flex-1 min-w-0">
               <div className="font-semibold text-[13px] text-ink-900 leading-tight">{t('common.chatLayout')}</div>
-              <div className="font-display italic text-[11px] text-ink-500 mt-0.5">{t('common.chatLayoutSub')}</div>
+              <div className="font-display text-[11px] text-ink-500 mt-0.5">{t('common.chatLayoutSub')}</div>
             </div>
             <ChatLayoutPicker className="w-[140px] shrink-0" />
           </div>
@@ -250,7 +250,7 @@ export function MobileMe() {
             style={{ border: '1px solid rgba(255, 122, 107, 0.3)' }}
           >
             {t('common.signOut')}
-            <span className="block font-display italic text-[11px] text-ink-500 mt-0.5">{t('mobileMe.signOutSub')}</span>
+            <span className="block font-display text-[11px] text-ink-500 mt-0.5">{t('mobileMe.signOutSub')}</span>
           </button>
           <DeleteAccountButton />
         </div>
@@ -285,7 +285,7 @@ function PushStatusTile() {
 
   if (!status.supported) {
     return (
-      <div className="bg-cloud rounded-[12px] p-3.5 text-[12px] text-ink-500 font-display italic"
+      <div className="bg-cloud rounded-[12px] p-3.5 text-[12px] text-ink-500 font-display"
         style={{ border: '1px solid var(--ink-100)' }}>
         {t('push.notSupported')}
       </div>
@@ -329,7 +329,7 @@ function PushStatusTile() {
         <span className="w-2 h-2 rounded-full shrink-0" style={{ background: status.prefEnabled ? 'var(--avail)' : 'var(--coral)' }} />
         <div className="flex-1 min-w-0">
           <div className="font-semibold text-[13px] text-ink-900 leading-tight">{t('push.appPref')}</div>
-          <div className="font-display italic text-[11px] text-ink-500 mt-0.5">
+          <div className="font-display text-[11px] text-ink-500 mt-0.5">
             {status.prefEnabled
               ? t('push.appPrefOnSub')
               : t('push.appPrefOffSub')}
@@ -344,7 +344,7 @@ function PushStatusTile() {
         <span className="w-2 h-2 rounded-full shrink-0" style={{ background: permColor }} />
         <div className="flex-1 min-w-0">
           <div className="font-semibold text-[13px] text-ink-900 leading-tight">{t('push.iosPerm')}</div>
-          <div className="font-display italic text-[11px] text-ink-500 mt-0.5">
+          <div className="font-display text-[11px] text-ink-500 mt-0.5">
             {perm === 'denied'
               ? t('push.iosPermDenied')
               : perm === 'granted'
@@ -363,7 +363,7 @@ function PushStatusTile() {
         <span className="w-2 h-2 rounded-full shrink-0" style={{ background: status.tokenSuffix ? 'var(--avail)' : 'var(--ink-300)' }} />
         <div className="flex-1 min-w-0">
           <div className="font-semibold text-[13px] text-ink-900 leading-tight">{t('push.deviceToken')}</div>
-          <div className="font-display italic text-[11px] text-ink-500 mt-0.5">
+          <div className="font-display text-[11px] text-ink-500 mt-0.5">
             {status.tokenSuffix
               ? t('push.deviceTokenOk', { suffix: status.tokenSuffix })
               : t('push.deviceTokenNone')}
@@ -374,12 +374,12 @@ function PushStatusTile() {
           deepest step the most recent init() reached. */}
       <div className="p-3.5">
         <div className="text-[10.5px] font-bold uppercase tracking-wider text-ink-500 mb-1">{t('push.lastStep')}</div>
-        <div className="font-display italic text-[12px] text-ink-700 leading-snug">
+        <div className="font-display text-[12px] text-ink-700 leading-snug">
           {stepLabel[status.lastStep]}
         </div>
       </div>
       {status.lastError && (
-        <div className="p-3.5 text-[11.5px] font-display italic text-coral-deep leading-snug">
+        <div className="p-3.5 text-[11.5px] font-display text-coral-deep leading-snug">
           {t('push.lastError', { err: status.lastError })}
         </div>
       )}
@@ -390,7 +390,7 @@ function PushStatusTile() {
         className="w-full text-left p-3.5 active:bg-paper transition text-[12.5px] font-semibold text-skype-deep disabled:opacity-50"
       >
         {busy ? t('push.working') : t('push.reregister')}
-        <span className="block font-display italic text-[11px] text-ink-500 mt-0.5 font-normal not-italic">
+        <span className="block font-display text-[11px] text-ink-500 mt-0.5 font-normal not-italic">
           {t('push.reregisterSub')}
         </span>
       </button>
@@ -401,7 +401,7 @@ function PushStatusTile() {
         className="w-full text-left p-3.5 active:bg-paper transition text-[12.5px] font-semibold text-coral-deep disabled:opacity-50"
       >
         {t('push.resetRetry')}
-        <span className="block font-display italic text-[11px] text-ink-500 mt-0.5 font-normal not-italic">
+        <span className="block font-display text-[11px] text-ink-500 mt-0.5 font-normal not-italic">
           {t('push.resetRetrySub')}
         </span>
       </button>
@@ -427,7 +427,7 @@ function DeleteAccountButton() {
         style={{ border: '1px solid rgba(255, 122, 107, 0.3)' }}
       >
         {t('push.deleteTitle')}
-        <span className="block font-display italic text-[11px] text-ink-500 mt-0.5">{t('push.deleteSub')}</span>
+        <span className="block font-display text-[11px] text-ink-500 mt-0.5">{t('push.deleteSub')}</span>
       </button>
     )
   }
@@ -440,11 +440,11 @@ function DeleteAccountButton() {
       <div className="font-display text-[13px] text-ink-900 font-semibold mb-1">
         {t('push.deleteConfirmTitle')}
       </div>
-      <div className="font-display italic text-[12px] text-ink-700 leading-snug mb-3">
+      <div className="font-display text-[12px] text-ink-700 leading-snug mb-3">
         {t('push.deleteConfirmBody')}
       </div>
       {err && (
-        <div className="text-[11.5px] text-coral-deep font-display italic mb-2 leading-snug">
+        <div className="text-[11.5px] text-coral-deep font-display mb-2 leading-snug">
           {err}
         </div>
       )}

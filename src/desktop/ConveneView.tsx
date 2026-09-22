@@ -70,7 +70,7 @@ export function ConveneView() {
           <div className="font-display font-medium text-[24px] text-ink-900 mb-2" style={{ letterSpacing: '-0.02em' }}>
             {t('convene.pickConvo')}
           </div>
-          <div className="font-display italic text-[14px] text-ink-500">
+          <div className="font-display text-[14px] text-ink-500">
             {t('convene.pickConvoSub')}
           </div>
         </div>
@@ -86,7 +86,7 @@ export function ConveneView() {
           <div className="font-display font-medium text-[24px] text-ink-900 mb-2" style={{ letterSpacing: '-0.02em' }}>
             {state.session ? t('convene.lastWrapped') : t('convene.noLive')}
           </div>
-          <div className="font-display italic text-[14px] text-ink-500 mb-5">
+          <div className="font-display text-[14px] text-ink-500 mb-5">
             {t('convene.ctaSub', { title: c.title })}
           </div>
           <button
@@ -113,7 +113,7 @@ export function ConveneView() {
           {state.session.title}
         </div>
         {state.session.flair && (
-          <em className="italic text-coral-deep" style={{ fontStyle: 'italic', fontWeight: 400 }}>{state.session.flair}</em>
+          <em className="not-italic text-coral-deep" style={{ fontWeight: 400 }}>{state.session.flair}</em>
         )}
         <div className="text-[12px] text-ink-500 ml-auto">
           {t('convene.startedAt', { time: new Date(state.session.started_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) })}
@@ -135,7 +135,7 @@ export function ConveneView() {
                   <Avatar p={p} size={32} />
                   <div className="min-w-0">
                     <div className="text-[13px] font-bold text-ink-900 leading-tight">{p.name}</div>
-                    <div className="font-display italic font-normal text-[11px] text-ink-500 leading-tight">{p.role ?? p.kind}</div>
+                    <div className="font-display font-normal text-[11px] text-ink-500 leading-tight">{p.role ?? p.kind}</div>
                   </div>
                 </div>
                 <div className="text-[11.5px] font-semibold flex items-center gap-1.5"
@@ -189,7 +189,7 @@ export function ConveneView() {
         style={{ background: 'var(--chrome-pane)' }}>
         <div className="py-3.5 px-[18px] pb-2.5 border-b border-ink-100">
           <h4 className="font-display font-medium text-[16px] tracking-tight mb-1">
-            {t('convene.transcriptTitle')} <em className="italic text-skype-deep" style={{ fontWeight: 400 }}>{t('convene.transcriptEm')}</em>
+            {t('convene.transcriptTitle')} <em className="not-italic text-skype-deep" style={{ fontWeight: 400 }}>{t('convene.transcriptEm')}</em>
           </h4>
           <div className="text-[11px] text-ink-500">{t('convene.entries', { count: state.transcript.length })}</div>
         </div>

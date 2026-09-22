@@ -622,7 +622,7 @@ function FileTree({ nodes, depth, expanded, onToggle, selectedPath, onSelect }: 
 function FileViewer({ path, body }: { path: string; body: string }) {
   const t = useT()
   const ext = path.includes('.') ? path.split('.').pop()!.toLowerCase() : ''
-  if (!body) return <div className="text-[13px] italic text-ink-400">{t('obs.emptyFile')}</div>
+  if (!body) return <div className="text-[13px] text-ink-400">{t('obs.emptyFile')}</div>
   if (ext === 'md' || ext === 'markdown') {
     return (
       <div className="cumora-prose font-display text-[14px] leading-[1.7] text-ink-900">

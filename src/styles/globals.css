@@ -603,7 +603,7 @@ html.dark body:not(.electron)::after {
 .cumora-code .hljs-type,
 .cumora-code .hljs-section { color: var(--whisper-deep); font-weight: 600; }
 .cumora-code .hljs-comment,
-.cumora-code .hljs-quote { color: var(--ink-300); font-style: italic; }
+.cumora-code .hljs-quote { color: var(--ink-300); }
 .cumora-code .hljs-meta,
 .cumora-code .hljs-meta .hljs-keyword,
 .cumora-code .hljs-doctag { color: var(--ink-500); }
@@ -614,7 +614,6 @@ html.dark body:not(.electron)::after {
 .cumora-code .hljs-punctuation { color: var(--ink-500); }
 .cumora-code .hljs-bullet,
 .cumora-code .hljs-link { color: var(--skype-deep); }
-.cumora-code .hljs-emphasis { font-style: italic; }
 .cumora-code .hljs-strong { font-weight: 700; }
 .cumora-code .hljs-addition { background: rgba(110, 197, 106, 0.12); color: #2D6F2A; }
 .cumora-code .hljs-deletion { background: rgba(255, 122, 107, 0.12); color: var(--coral-deep); }
@@ -643,7 +642,7 @@ html.dark .cumora-code .hljs-function .hljs-title,
 html.dark .cumora-code .hljs-type,
 html.dark .cumora-code .hljs-section { color: #61afef; font-weight: 600; }
 html.dark .cumora-code .hljs-comment,
-html.dark .cumora-code .hljs-quote { color: #5c6370; font-style: italic; }
+html.dark .cumora-code .hljs-quote { color: #5c6370; }
 html.dark .cumora-code .hljs-meta,
 html.dark .cumora-code .hljs-meta .hljs-keyword,
 html.dark .cumora-code .hljs-doctag { color: #5c6370; }
@@ -768,7 +767,6 @@ html.dark .ship-workspace option {
   border-left: 3px solid var(--skype);
   padding-left: 1em;
   color: var(--doc-quote);
-  font-style: italic;
 }
 .tiptap code {
   background: var(--doc-code-bg);

@@ -1277,7 +1277,7 @@ export const en = {
   'me.hideArchived': 'Hide archived',
   'me.showArchivedCount': 'Show archived ({n})',
   'me.sectionComputers': '↳ Where your agents run',
-  'me.computersIntro': 'Every agent runs on a <strong>Computer</strong>. <em>Cumora Cloud</em> is built in and always on. Pair your own machine or a VPS to run agents on your local <span class="font-mono text-[12px]"> Claude Code</span>, <span class="font-mono text-[12px]"> Codex</span>, <span class="font-mono text-[12px]"> Grok Build</span>, <span class="font-mono text-[12px]"> Cursor</span>, or <span class="font-mono text-[12px]"> OpenCode</span> — each agent gets its own isolated workspace, memory and skills there.',
+  'me.computersIntro': 'Every agent runs on a <strong>Computer</strong>. <strong>Cumora Cloud</strong> is built in and always on. Pair your own machine or a VPS to run agents on your local <span class="font-mono text-[12px]"> Claude Code</span>, <span class="font-mono text-[12px]"> Codex</span>, <span class="font-mono text-[12px]"> Grok Build</span>, <span class="font-mono text-[12px]"> Cursor</span>, or <span class="font-mono text-[12px]"> OpenCode</span> — each agent gets its own isolated workspace, memory and skills there.',
   'me.agentsCountOne': '{n} agent',
   'me.agentsCountOther': '{n} agents',
   'me.updateAvailableShort': 'update',

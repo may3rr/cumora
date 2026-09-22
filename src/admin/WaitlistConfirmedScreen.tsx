@@ -62,7 +62,7 @@ export function WaitlistConfirmedScreen({ email }: { email: string | null }) {
           <span className="cumora-waitlist-email">{displayEmail}</span>
           {bodyParts.slice(1).join(displayEmail)}
         </div>
-        <div style={{ marginBottom: 24, fontSize: 12.5, color: 'var(--ink-400)', fontStyle: 'italic' }}>
+        <div style={{ marginBottom: 24, fontSize: 12.5, color: 'var(--ink-400)' }}>
           {footerParts[0]}<GetDesktopAppLink variant="text" />{footerParts.slice(1).join('\u0000')}
         </div>
         <button type="button" className="btn-ghost" onClick={() => setDismissed(true)}>

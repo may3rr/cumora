@@ -327,7 +327,7 @@ function ToastCard({ toast, onClick, onDismiss }: { toast: Toast; onClick: () =>
             <span className="text-[12.5px] font-semibold text-ink-900 truncate">
               {toast.authorName}
             </span>
-            <span className="text-[10.5px] text-ink-300 italic font-display truncate">
+            <span className="text-[10.5px] text-ink-300 font-display truncate">
               {toast.conversationTitle}
             </span>
             {toast.unreadCount !== undefined && toast.unreadCount > 1 && (

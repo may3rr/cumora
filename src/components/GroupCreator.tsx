@@ -110,7 +110,7 @@ export function GroupCreator({ onClose, initialPicked }: Props) {
       >
         <div className="px-6 py-5 border-b border-ink-100 shrink-0">
           <h2 className="font-display font-medium text-[20px] tracking-tight">{t('group.title')}</h2>
-          <div className="text-[12.5px] text-ink-500 italic font-display mt-0.5">
+          <div className="text-[12.5px] text-ink-500 font-display mt-0.5">
             {t('group.intro')}
           </div>
         </div>
@@ -120,7 +120,7 @@ export function GroupCreator({ onClose, initialPicked }: Props) {
             {t('group.fieldTitle')}
             <span className="ml-1.5 text-ink-300 normal-case font-medium tracking-normal">{t('group.fieldOptional')}</span>
           </label>
-          <div className="text-[11.5px] text-ink-300 mb-1.5 font-display italic">
+          <div className="text-[11.5px] text-ink-300 mb-1.5 font-display">
             {autoTitle
               ? t('group.leaveBlankTo', { title: autoTitle })
               : t('group.whatIsAbout')}
@@ -141,7 +141,7 @@ export function GroupCreator({ onClose, initialPicked }: Props) {
                 {t('group.fieldProject')}
                 <span className="ml-1.5 text-ink-300 normal-case font-medium tracking-normal">{t('group.fieldOptional')}</span>
               </label>
-              <div className="text-[11.5px] text-ink-300 mb-1.5 font-display italic">
+              <div className="text-[11.5px] text-ink-300 mb-1.5 font-display">
                 {t('group.attachProject')}
               </div>
               <div className="flex flex-wrap gap-1.5 mb-5">
@@ -176,7 +176,7 @@ export function GroupCreator({ onClose, initialPicked }: Props) {
           )}
 
           <label className="block text-[11px] font-bold tracking-wider uppercase text-ink-500 mb-1">{t('group.fieldMembers')}</label>
-          <div className="text-[11.5px] text-ink-300 mb-2 font-display italic">
+          <div className="text-[11.5px] text-ink-300 mb-2 font-display">
             {picked.size === 0 ? t('group.clickToAdd') : t('group.nSelected', { n: picked.size })}
           </div>
           <div className="grid grid-cols-1 gap-1.5">
@@ -212,7 +212,7 @@ export function GroupCreator({ onClose, initialPicked }: Props) {
               )
             })}
             {candidates.length === 0 && (
-              <div className="text-[12.5px] text-ink-500 italic font-display py-4 text-center">
+              <div className="text-[12.5px] text-ink-500 font-display py-4 text-center">
                 {t('group.noTeammates')}
               </div>
             )}

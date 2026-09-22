@@ -678,7 +678,7 @@ export function MobileChat() {
           </div>
         )}
         {uploading && (
-          <div className="mb-2 text-[11.5px] text-ink-500 italic">{t('mobchat.uploading')}</div>
+          <div className="mb-2 text-[11.5px] text-ink-500">{t('mobchat.uploading')}</div>
         )}
         {uploadError && (
           <div className="mb-2 text-[11.5px] py-1 px-2 rounded-md text-coral-deep bg-coral-soft inline-block max-w-full truncate">
@@ -1233,7 +1233,7 @@ export function MobileChatInfo() {
               title={t('mobchat.tapToRename')}
             >{c.title}</button>
           )}
-          <div className="font-display italic text-[14px] text-ink-500">
+          <div className="font-display text-[14px] text-ink-500">
             {memberPs.length} {memberPs.length === 1 ? t('mobchat.memberOne') : t('mobchat.memberMany')}
             {agentCount > 0 && ` · ${agentCount} ${agentCount === 1 ? t('mobchat.agentOne') : t('mobchat.agentMany')}`}
           </div>
@@ -1251,20 +1251,20 @@ export function MobileChatInfo() {
               }}
               placeholder={t('mobchat.topicPlaceholder')}
               maxLength={200}
-              className="mt-2 block w-full text-center bg-transparent text-[12.5px] text-ink-700 italic font-display placeholder:text-ink-300 outline-none border-b border-sky2-200 focus:border-skype-deep transition pb-0.5"
+              className="mt-2 block w-full text-center bg-transparent text-[12.5px] text-ink-700 font-display placeholder:text-ink-300 outline-none border-b border-sky2-200 focus:border-skype-deep transition pb-0.5"
             />
           ) : c.topic ? (
             <button
               type="button"
               onClick={startEditTopic}
-              className="mt-2 block mx-auto max-w-full truncate text-[12.5px] text-ink-500 italic font-display active:text-skype-deep transition"
+              className="mt-2 block mx-auto max-w-full truncate text-[12.5px] text-ink-500 font-display active:text-skype-deep transition"
               title={t('mobchat.tapToEditTopic')}
             >{c.topic}</button>
           ) : (
             <button
               type="button"
               onClick={startEditTopic}
-              className="mt-2 inline-block text-[12.5px] text-ink-300 italic font-display active:text-skype-deep transition"
+              className="mt-2 inline-block text-[12.5px] text-ink-300 font-display active:text-skype-deep transition"
             >{t('mobchat.addTopic')}</button>
           )}
         </div>
@@ -1278,7 +1278,7 @@ export function MobileChatInfo() {
           </div>
           <h3 className="font-display font-medium text-[26px] tracking-tight mb-1">{focus.name}</h3>
           {focus.role && (
-            <div className="font-display italic text-[14px] text-ink-500 mb-3.5">{focus.role}</div>
+            <div className="font-display text-[14px] text-ink-500 mb-3.5">{focus.role}</div>
           )}
           <div className="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-cloud border border-ink-100 text-[13px] text-ink-700 shadow-soft">
             <span className="w-2 h-2 rounded-full animate-pulse-soft" style={{ background: `var(--${statusTone})` }} />
@@ -1354,7 +1354,7 @@ export function MobileChatInfo() {
                     <div className="text-[13px] font-semibold text-ink-900 truncate">
                       {p.name}{isSelf && <span className="text-ink-300 font-normal">{t('mobchat.youSuffix')}</span>}
                     </div>
-                    <div className="text-[11px] text-ink-500 truncate font-display italic">
+                    <div className="text-[11px] text-ink-500 truncate font-display">
                       {p.kind === 'agent' ? (p.role ?? t('common.agent')) : t('mobchat.humanTeammate')}
                     </div>
                   </div>
@@ -1364,7 +1364,7 @@ export function MobileChatInfo() {
               )
             })}
             {filteredMembers.length === 0 && (
-              <div className="py-5 text-center text-[12px] text-ink-400 italic font-display">
+              <div className="py-5 text-center text-[12px] text-ink-400 font-display">
                 {t('mobchat.noMembersMatch', { query: memberQuery })}
               </div>
             )}
@@ -1390,7 +1390,7 @@ export function MobileChatInfo() {
         <div className="py-4 px-5 border-b border-ink-100">
           <h4 className="text-[10.5px] font-bold text-ink-300 tracking-wider uppercase mb-3">{t('mobchat.about')}</h4>
           <div
-            className="py-3 px-3.5 rounded-r-lg font-display italic text-[13px] leading-[1.55] text-ink-700"
+            className="py-3 px-3.5 rounded-r-lg font-display text-[13px] leading-[1.55] text-ink-700"
             style={{
               background: 'linear-gradient(135deg, var(--sky-50), transparent)',
               borderLeft: '2px solid var(--skype)',
@@ -1409,7 +1409,7 @@ export function MobileChatInfo() {
           style={{ border: '1px solid rgba(255, 122, 107, 0.3)' }}
         >
           {t('mobchat.leaveConversation')}
-          <span className="block font-display italic text-[11px] text-ink-500 mt-0.5">{t('mobchat.agentsContinueWithout')}</span>
+          <span className="block font-display text-[11px] text-ink-500 mt-0.5">{t('mobchat.agentsContinueWithout')}</span>
         </button>
       </div>
     </section>

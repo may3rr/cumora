@@ -166,7 +166,7 @@ export function UpdateBanner({ forceOpen, onOpen }: BannerProps) {
           {version && <span className="ml-1.5 text-ink-500 font-normal">v{version}</span>}
         </div>
         {isDownloading && status.percent !== undefined && (
-          <div className="text-[11px] text-ink-500 font-display italic mt-0.5">
+          <div className="text-[11px] text-ink-500 font-display mt-0.5">
             {status.percent.toFixed(0)}% · {fmtBytes(status.transferred ?? 0)} / {fmtBytes(status.total ?? 0)}
           </div>
         )}
@@ -239,7 +239,7 @@ export function UpdaterDialog({ open, onClose }: DialogProps) {
           <h2 className="font-display font-medium text-[18px] tracking-tight text-ink-900">
             {t('updater.title')}
           </h2>
-          <div className="mt-1 text-[12.5px] text-ink-500 italic font-display">
+          <div className="mt-1 text-[12.5px] text-ink-500 font-display">
             {kind === 'idle' && t('updater.latestVersion')}
             {kind === 'checking' && t('updater.checkingUpdates')}
             {kind === 'update-not-available' && t('updater.latestVersion')}
@@ -281,7 +281,7 @@ export function UpdaterDialog({ open, onClose }: DialogProps) {
           {/* Progress */}
           {kind === 'downloading' && (
             <div>
-              <div className="flex justify-between text-[11.5px] text-ink-500 mb-1.5 font-display italic">
+              <div className="flex justify-between text-[11.5px] text-ink-500 mb-1.5 font-display">
                 <span>{t('updater.downloadingLabel')}</span>
                 <span className="font-mono text-ink-700">
                   {(status.percent ?? 0).toFixed(0)}% · {fmtBytes(status.transferred ?? 0)} / {fmtBytes(status.total ?? 0)}

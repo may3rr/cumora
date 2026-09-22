@@ -112,7 +112,7 @@ function PeekLoading({ icon, label }: { icon: ReactNode; label: string }) {
         <div className="w-12 h-12 rounded-[12px] grid place-items-center bg-sky2-50 text-skype-deep">
           {icon}
         </div>
-        <div className="text-[12.5px] font-display italic">{label}</div>
+        <div className="text-[12.5px] font-display">{label}</div>
       </div>
     </div>
   )

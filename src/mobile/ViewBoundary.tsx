@@ -51,7 +51,7 @@ export class ViewBoundary extends Component<Props, State> {
             <div className="font-display text-[18px] text-ink-900 mb-2">
               {t('viewBoundary.hitASnag', { name: this.props.name })}
             </div>
-            <div className="font-display italic text-[13px] text-ink-500 leading-snug mb-5">
+            <div className="font-display text-[13px] text-ink-500 leading-snug mb-5">
               {this.state.error.message || t('viewBoundary.fallbackMsg')}
             </div>
             <button

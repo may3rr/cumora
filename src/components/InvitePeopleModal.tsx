@@ -121,7 +121,7 @@ export function InvitePeopleModal({ companyId, companyName, actorRole, onClose }
           <h2 className="font-display font-medium text-[20px] tracking-tight">
             {t('invite.title', { name: companyName })}
           </h2>
-          <div className="text-[12.5px] text-ink-500 italic font-display mt-0.5">
+          <div className="text-[12.5px] text-ink-500 font-display mt-0.5">
             {t('invite.intro')}
           </div>
         </div>
@@ -155,7 +155,7 @@ export function InvitePeopleModal({ companyId, companyName, actorRole, onClose }
                 <label className="block text-[11px] font-bold tracking-wider uppercase text-ink-500 mb-1">
                   {t('invite.fieldEmail')}
                 </label>
-                <div className="text-[11.5px] text-ink-300 mb-1.5 font-display italic">
+                <div className="text-[11.5px] text-ink-300 mb-1.5 font-display">
                   {t('invite.emailHelp')}
                 </div>
                 <input
@@ -182,7 +182,7 @@ export function InvitePeopleModal({ companyId, companyName, actorRole, onClose }
                     <span className="block text-[12.5px] font-semibold text-ink-800">
                       {t('invite.sendEmailLabel')}
                     </span>
-                    <span className="block text-[11.5px] text-ink-400 font-display italic mt-0.5 leading-snug">
+                    <span className="block text-[11.5px] text-ink-400 font-display mt-0.5 leading-snug">
                       {t('invite.sendEmailDetail')}
                     </span>
                   </span>
@@ -192,7 +192,7 @@ export function InvitePeopleModal({ companyId, companyName, actorRole, onClose }
           )}
 
           {tab === 'link' && (
-            <div className="rounded-[10px] p-3 text-[12px] text-ink-500 font-display italic" style={{ background: 'var(--paper)', border: '1px dashed var(--ink-200)' }}>
+            <div className="rounded-[10px] p-3 text-[12px] text-ink-500 font-display" style={{ background: 'var(--paper)', border: '1px dashed var(--ink-200)' }}>
               {t('invite.linkHelp')}
             </div>
           )}
@@ -274,10 +274,10 @@ export function InvitePeopleModal({ companyId, companyName, actorRole, onClose }
               <span className="text-[11px] text-ink-300">{activeInvitations.length}</span>
             </div>
             {loadingList && (
-              <div className="text-[12px] text-ink-300 italic font-display py-4 text-center">{t('invite.loading')}</div>
+              <div className="text-[12px] text-ink-300 font-display py-4 text-center">{t('invite.loading')}</div>
             )}
             {!loadingList && activeInvitations.length === 0 && (
-              <div className="text-[12.5px] text-ink-400 italic font-display py-3">{t('invite.noPending')}</div>
+              <div className="text-[12.5px] text-ink-400 font-display py-3">{t('invite.noPending')}</div>
             )}
             <div className="flex flex-col gap-1.5">
               {activeInvitations.map((inv) => (
@@ -286,7 +286,7 @@ export function InvitePeopleModal({ companyId, companyName, actorRole, onClose }
             </div>
             {historicalInvitations.length > 0 && (
               <details className="mt-3">
-                <summary className="text-[11.5px] text-ink-400 cursor-pointer font-display italic hover:text-ink-600">
+                <summary className="text-[11.5px] text-ink-400 cursor-pointer font-display hover:text-ink-600">
                   {t('invite.showPast', { n: historicalInvitations.length, s: historicalInvitations.length === 1 ? '' : 's' })}
                 </summary>
                 <div className="flex flex-col gap-1.5 mt-2">
@@ -303,7 +303,7 @@ export function InvitePeopleModal({ companyId, companyName, actorRole, onClose }
         </div>
 
         <div className="px-6 py-4 border-t border-ink-100 flex items-center gap-2 bg-paper shrink-0">
-          <div className="text-[11.5px] text-ink-300 italic font-display">
+          <div className="text-[11.5px] text-ink-300 font-display">
             {t('invite.expireFootnote')}
           </div>
           <div className="flex-1" />
@@ -364,7 +364,7 @@ function CreatedInviteCard({ invite, onDone }: { invite: ApiInvitationWithToken;
               style={{ background: 'var(--skype)' }}>✓</span>
         <div className="text-[13px] font-semibold text-ink-900">{headline}</div>
       </div>
-      <div className="text-[11.5px] text-ink-500 italic font-display">
+      <div className="text-[11.5px] text-ink-500 font-display">
         {invite.email
           ? delivery?.attempted && delivery.ok
             ? t('invite.deliveryOk', { email: invite.email })
@@ -435,7 +435,7 @@ function InvitationRow({
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2 min-w-0">
           <div className="text-[13px] font-semibold text-ink-900 truncate">
-            {inv.email ?? <span className="text-ink-500 italic font-display">{t('invite.shareableLabel')}</span>}
+            {inv.email ?? <span className="text-ink-500 font-display">{t('invite.shareableLabel')}</span>}
           </div>
           <span
             className="px-1.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider"
@@ -443,7 +443,7 @@ function InvitationRow({
           >{pill.label}</span>
           <span className="text-[10.5px] text-ink-400 uppercase tracking-wider font-bold">{inv.role}</span>
         </div>
-        <div className="text-[11px] text-ink-400 mt-0.5 font-display italic flex flex-wrap items-center gap-x-1.5 gap-y-0.5">
+        <div className="text-[11px] text-ink-400 mt-0.5 font-display flex flex-wrap items-center gap-x-1.5 gap-y-0.5">
           {!inv.email && (
             <span>{t('invite.useCount', { used: inv.useCount, max: inv.maxUses })}</span>
           )}

@@ -277,10 +277,10 @@ export function MobileCalendar() {
           />
         )}
         {!selectedDay && (
-          <div className="px-2 py-6 text-center text-[12.5px] text-ink-400 italic">{t('mcal.pickDay')}</div>
+          <div className="px-2 py-6 text-center text-[12.5px] text-ink-400">{t('mcal.pickDay')}</div>
         )}
         {!loaded && events.length === 0 && (
-          <div className="px-2 py-6 text-center text-[12.5px] text-ink-300 italic">{t('mcal.loading')}</div>
+          <div className="px-2 py-6 text-center text-[12.5px] text-ink-300">{t('mcal.loading')}</div>
         )}
       </div>
 
@@ -326,7 +326,7 @@ function DayDetail({ day, items, onEdit, onNew, byId }: {
           <div className="mx-auto mb-2 w-9 h-9 rounded-full grid place-items-center bg-sky2-50 text-skype-deep">
             <ICalendar className="w-[18px] h-[18px]" />
           </div>
-          <div className="text-[12.5px] text-ink-500 font-display italic leading-relaxed">{t('mcal.emptyDay')}</div>
+          <div className="text-[12.5px] text-ink-500 font-display leading-relaxed">{t('mcal.emptyDay')}</div>
           <button
             type="button"
             onClick={onNew}

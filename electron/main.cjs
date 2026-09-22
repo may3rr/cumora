@@ -252,7 +252,7 @@ const AUTH_DONE_HTML = `<!doctype html>
   }
   .cloud { font-size: 56px; line-height: 1; margin-bottom: 24px; }
   h1 { font-size: 22px; font-weight: 500; margin: 0 0 6px; letter-spacing: -0.01em; }
-  .sub { font-style: italic; font-size: 13.5px; color: #65778A; margin: 0 0 28px; }
+  .sub { font-size: 13.5px; color: #65778A; margin: 0 0 28px; }
   /* Same shape + color story as the website's Download CTA: flat sky-
      blue rectangle with generous rounding, white label, no gradients,
      soft tinted shadow. Hover lifts a touch + darkens the surface a
@@ -292,7 +292,7 @@ const AUTH_DONE_HTML = `<!doctype html>
     transform: none;
   }
   .btn-mark { width: 14px; height: 14px; opacity: 0.9; }
-  .hint { font-size: 11.5px; color: #8B9AAC; margin-top: 20px; font-style: italic; }
+  .hint { font-size: 11.5px; color: #8B9AAC; margin-top: 20px; }
   .ok { color: #34A853; font-weight: 600; }
   .err { color: #D03A3A; font-size: 13px; margin-top: 16px; }
 </style>

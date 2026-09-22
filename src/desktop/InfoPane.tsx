@@ -81,7 +81,7 @@ export function InfoPane() {
           <Avatar p={agent} size={88} ringColor="var(--cloud)" />
         </div>
         <h3 className="font-display font-medium text-[24px] tracking-tight mb-0.5">{agent.name}</h3>
-        <div className="font-display italic font-normal text-[13px] text-ink-500 mb-3">
+        <div className="font-display font-normal text-[13px] text-ink-500 mb-3">
           {agent.role ?? (isAgent ? t('convo.roleAgent') : t('convo.roleHuman'))}
         </div>
         <div className="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full bg-cloud border border-ink-100 text-[12px] text-ink-700 shadow-soft">
@@ -162,7 +162,7 @@ export function InfoPane() {
               {t('info.about', { name: agent.name })}
             </h4>
             <div
-              className="py-3 px-3.5 rounded-r-lg font-display italic font-normal text-[13px] leading-[1.55] text-ink-700"
+              className="py-3 px-3.5 rounded-r-lg font-display font-normal text-[13px] leading-[1.55] text-ink-700"
               style={{
                 background: 'linear-gradient(135deg, var(--sky-50), transparent)',
                 borderLeft: '2px solid var(--skype)',

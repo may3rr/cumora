@@ -78,7 +78,7 @@ function buildInvitationEmailHtml(args: {
                     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
                            style="background:#F1F6FB; border-left:3px solid #00A8F0; border-radius:6px;">
                       <tr>
-                        <td style="padding:14px 16px; font-family:${fontStack}; font-size:14px; font-weight:400; line-height:1.5; color:#233A53; font-style:italic;">
+                        <td style="padding:14px 16px; font-family:${fontStack}; font-size:14px; font-weight:400; line-height:1.5; color:#233A53;">
                           &ldquo;${escapeHtml(args.note)}&rdquo;
                         </td>
                       </tr>

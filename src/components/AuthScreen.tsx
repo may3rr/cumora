@@ -195,7 +195,7 @@ export function AuthScreen() {
         <CloudLogo size={64} />
         <div className="text-center">
           <div className="font-display text-[22px] text-ink-900">{t('auth.welcome')}</div>
-          <div className="font-display italic text-[13px] text-ink-400 mt-1">
+          <div className="font-display text-[13px] text-ink-400 mt-1">
             {t('auth.signInToContinue')}
           </div>
         </div>
@@ -252,7 +252,7 @@ export function AuthScreen() {
             {err}
           </div>
         )}
-        <div className="text-[11px] text-ink-300 text-center font-display italic">
+        <div className="text-[11px] text-ink-300 text-center font-display">
           {t('auth.providerNote')}
         </div>
         <ServerSwitch open={picker} onToggle={() => setPicker((v) => !v)} />

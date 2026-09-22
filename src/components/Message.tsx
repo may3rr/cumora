@@ -162,7 +162,7 @@ function MentionCard({ p, x, y }: { p: Participant; x: number; y: number }) {
         <Avatar p={p} size={44} ringColor="var(--cloud)" showStatus={false} />
         <div className="min-w-0 flex-1">
           <div className="font-semibold text-[14px] text-ink-900 truncate">{p.name}</div>
-          <div className="text-[11.5px] font-display italic text-ink-500 truncate mb-1">{role}</div>
+          <div className="text-[11.5px] font-display text-ink-500 truncate mb-1">{role}</div>
           {p.bio && (
             <div className="text-[11.5px] text-ink-500 leading-[1.45] line-clamp-3">{p.bio}</div>
           )}
@@ -377,7 +377,7 @@ function MessagePeekCard(
           </div>
         </div>
         <div className="text-[12.5px] text-ink-700 leading-[1.55] line-clamp-5 break-words">
-          {bodyPreview || <span className="italic text-ink-400">{t('msgview.noText')}</span>}
+          {bodyPreview || <span className="text-ink-400">{t('msgview.noText')}</span>}
         </div>
       </div>
     </div>
@@ -1161,7 +1161,7 @@ function EmailCard({ msg }: { msg: Message }) {
           )}
         </div>
         <div className="font-display font-medium text-[16px] leading-snug text-ink-900 break-words">
-          {e.subject || <span className="text-ink-400 italic">{t('email.noSubject')}</span>}
+          {e.subject || <span className="text-ink-400">{t('email.noSubject')}</span>}
         </div>
       </div>
       <div className="px-4 py-2.5 text-[11.5px] text-ink-500 space-y-0.5 border-b border-[rgba(120,110,95,0.18)]">
@@ -1179,7 +1179,7 @@ function EmailCard({ msg }: { msg: Message }) {
       {showHtml ? (
         <div className="px-2 py-2 bg-white">
           {htmlLoading && (
-            <div className="px-3 py-6 text-[12px] text-ink-400 italic">{t('msgview.loadingHtml')}</div>
+            <div className="px-3 py-6 text-[12px] text-ink-400">{t('msgview.loadingHtml')}</div>
           )}
           {htmlError && (
             <div className="px-3 py-3 text-[12px] text-coral-deep">
@@ -1256,7 +1256,7 @@ function EmailAttachmentRow({ att }: { att: NonNullable<NonNullable<Message['ema
           download
         </a>
       ) : (
-        <span className="shrink-0 text-[11.5px] text-ink-300 italic">unavailable</span>
+        <span className="shrink-0 text-[11.5px] text-ink-300">unavailable</span>
       )}
     </div>
   )
@@ -1340,7 +1340,7 @@ function WhisperLink({ msg }: { msg: Message }) {
         <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path d="M3 12c0-4 4-8 9-8s9 4 9 8-4 8-9 8a10 10 0 01-3-.5L3 21l1.5-5A8 8 0 013 12z"/></svg>
       </div>
       <div className="min-w-0 flex-1">
-        <span className="text-whisper-deep font-bold">{a?.name}</span>{t('msgview.and')}<span className="text-whisper-deep font-bold">{b?.name}</span>{t('msgview.whisperingSuffix')} <em className="font-display italic font-normal text-whisper-deep">{w.snippet}</em> · {w.count} messages
+        <span className="text-whisper-deep font-bold">{a?.name}</span>{t('msgview.and')}<span className="text-whisper-deep font-bold">{b?.name}</span>{t('msgview.whisperingSuffix')} <em className="not-italic font-display font-normal text-whisper-deep">{w.snippet}</em> · {w.count} messages
       </div>
       <div className="ml-auto text-[11px] font-semibold py-1 px-2.5 rounded-full bg-[rgba(124,92,255,0.15)] text-whisper-deep shrink-0">{t('msgview.peekArrow')}</div>
     </div>
@@ -1603,7 +1603,7 @@ export function SystemRow({ msg, delay = 0, animate = true }: { msg: { body: str
 
   return (
     <div className={cn('flex justify-center my-3', riseCls)} style={riseStyle}>
-      <div className="text-[11.5px] text-ink-300 italic font-display flex items-center gap-1.5 flex-wrap justify-center">
+      <div className="text-[11.5px] text-ink-300 font-display flex items-center gap-1.5 flex-wrap justify-center">
         {payload.kind === 'kicked' && actor ? (
           <>
             <SystemActor p={actor} onClick={() => openAgentInfo(actor.id)} />
@@ -1663,7 +1663,7 @@ function QuoteCard({ msg }: { msg: Message }) {
         className="mb-1 max-w-[min(100%,580px)] flex items-stretch gap-2 text-left rounded-md bg-cloud/60 border border-ink-100 hover:border-ink-200 px-2 py-1.5 transition-colors"
       >
         <span className="w-[3px] rounded bg-ink-200" />
-        <span className="min-w-0 text-[11.5px] text-ink-400 italic">{t('msgview.messageDeleted')}</span>
+        <span className="min-w-0 text-[11.5px] text-ink-400">{t('msgview.messageDeleted')}</span>
       </button>
     )
   }

@@ -133,7 +133,7 @@ export function WorkspaceSettingsModal({ company, companyCount, onInvite, onClos
 
           {error && <div className="mb-3 rounded-[8px] bg-coral-soft/40 px-3 py-2 text-[11.5px] text-coral-deep">{error}</div>}
           {loading ? (
-            <div className="py-7 text-center text-[12px] italic font-display text-ink-300">{t('workspace.loadingMembers')}</div>
+            <div className="py-7 text-center text-[12px] font-display text-ink-300">{t('workspace.loadingMembers')}</div>
           ) : (
             <div className="rounded-[10px] border border-ink-100 divide-y divide-ink-100 overflow-hidden">
               {members.map((member) => {

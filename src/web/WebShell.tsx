@@ -76,7 +76,7 @@ function WebHandoff() {
         <CloudLogo size={64} />
         <div className="space-y-1">
           <div className="font-display text-[22px] text-ink-900">{t('web.signedIn')}</div>
-          <div className="font-display italic text-[13px] text-ink-400">
+          <div className="font-display text-[13px] text-ink-400">
             {t('web.openingDesktop')}
           </div>
         </div>
@@ -94,10 +94,10 @@ function WebHandoff() {
           <button
             type="button"
             onClick={() => void signOut()}
-            className="text-[12px] text-ink-400 hover:text-ink-700 transition font-display italic mt-1"
+            className="text-[12px] text-ink-400 hover:text-ink-700 transition font-display mt-1"
           >{t('web.signOut')}</button>
         </div>
-        <div className="text-[11px] text-ink-300 font-display italic">
+        <div className="text-[11px] text-ink-300 font-display">
           {t('web.onlyDesktopNote')}
         </div>
       </div>
@@ -147,7 +147,7 @@ function WebLanding() {
         <CloudLogo size={64} />
         <div className="text-center space-y-1">
           <div className="font-display text-[22px] text-ink-900">{t('web.desktopApp')}</div>
-          <div className="font-display italic text-[13px] text-ink-400">
+          <div className="font-display text-[13px] text-ink-400">
             {t('web.desktopAppSub')}
           </div>
         </div>
@@ -187,7 +187,7 @@ function WebLanding() {
             {err}
           </div>
         )}
-        <div className="w-full flex items-center gap-3 text-[11px] text-ink-300 font-display italic">
+        <div className="w-full flex items-center gap-3 text-[11px] text-ink-300 font-display">
           <div className="flex-1 h-px bg-ink-100" />
           {t('web.or')}
           <div className="flex-1 h-px bg-ink-100" />
@@ -206,7 +206,7 @@ function WebLanding() {
             style={{}}
           />
         </div>
-        <div className="text-[11px] text-ink-300 text-center font-display italic">
+        <div className="text-[11px] text-ink-300 text-center font-display">
           {t('web.providerNote2')}
         </div>
       </div>

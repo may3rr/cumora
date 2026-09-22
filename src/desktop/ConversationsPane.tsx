@@ -438,13 +438,13 @@ function SearchResultsPane({
   }, [selectedIdx])
 
   if (loading && !results) {
-    return <div className="px-4 py-6 text-[12px] text-ink-300 italic font-display">{t('convo.searching')}</div>
+    return <div className="px-4 py-6 text-[12px] text-ink-300 font-display">{t('convo.searching')}</div>
   }
   if (!results) return null
   const total = results.participants.length + results.rooms.length + results.groups.length + results.messages.length
   if (total === 0) {
     return (
-      <div className="px-4 py-8 text-center text-[12.5px] text-ink-300 italic font-display">
+      <div className="px-4 py-8 text-center text-[12.5px] text-ink-300 font-display">
         {t('convo.noMatches')} <span className="text-ink-700 not-italic font-semibold">"{q}"</span>
       </div>
     )
@@ -1051,7 +1051,7 @@ export function ConversationsPane({ onResizeStart }: { onResizeStart?: (e: React
             components={{ Footer: () => <div style={{ height: 18 }} /> }}
             itemContent={(_, item) => {
               if (item.type === 'loading') {
-                return <div className="px-3 py-4 text-[12px] text-ink-300 italic font-display">{t('convo.loading')}</div>
+                return <div className="px-3 py-4 text-[12px] text-ink-300 font-display">{t('convo.loading')}</div>
               }
               if (item.type === 'label') return sectionLabel(item.text)
               if (item.type === 'divider') {
@@ -1160,16 +1160,16 @@ function AddToGroupPicker({ participantId, participantName, groups, onClose }: {
       >
         <div className="px-6 py-5 border-b border-ink-100 shrink-0">
           <h3 className="font-display font-medium text-[18px] tracking-tight">{t('convo.addToTitle', { name: participantName })}</h3>
-          <div className="text-[12px] text-ink-500 italic font-display mt-0.5">{t('convo.addToGroupPrompt')}</div>
+          <div className="text-[12px] text-ink-500 font-display mt-0.5">{t('convo.addToGroupPrompt')}</div>
         </div>
         <div className="flex-1 overflow-y-auto px-3 py-2.5 min-h-0">
           {done ? (
             <div className="py-6 text-center">
               <div className="text-[14px] text-ink-900 font-medium">{t('convo.addedTo')} <em className="not-italic text-skype-deep">"{done.groupTitle}"</em>.</div>
-              <div className="text-[12px] text-ink-500 italic font-display mt-1">{t('convo.willSeeMessages', { name: participantName })}</div>
+              <div className="text-[12px] text-ink-500 font-display mt-1">{t('convo.willSeeMessages', { name: participantName })}</div>
             </div>
           ) : groups.length === 0 ? (
-            <div className="py-6 text-center text-[12.5px] text-ink-500 italic font-display">
+            <div className="py-6 text-center text-[12.5px] text-ink-500 font-display">
               {t('convo.noGroupsForAdd', { name: participantName })}
             </div>
           ) : (
@@ -1303,7 +1303,7 @@ function AddMembersPicker({ group, candidates, onClose }: {
           <h3 className="font-display font-medium text-[18px] tracking-tight">
             {t('convo.addMembersTo')} <span className="text-skype-deep">{group.title}</span>
           </h3>
-          <div className="text-[12px] text-ink-500 italic font-display mt-0.5">
+          <div className="text-[12px] text-ink-500 font-display mt-0.5">
             {remaining.length === 0
               ? t('convo.everyoneAlreadyInGroup')
               : t('convo.clickToAdd', { count: added.size })}
@@ -1325,7 +1325,7 @@ function AddMembersPicker({ group, candidates, onClose }: {
         )}
         <div className="flex-1 overflow-y-auto py-2">
           {filtered.length === 0 && query.trim() && (
-            <div className="px-6 py-4 text-[12px] italic text-ink-300 font-display">{t('convo.noMatchQuery', { query })}</div>
+            <div className="px-6 py-4 text-[12px] text-ink-300 font-display">{t('convo.noMatchQuery', { query })}</div>
           )}
           {filtered.map((p) => {
             const busy = busyId === p.id

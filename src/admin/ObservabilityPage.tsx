@@ -1151,7 +1151,7 @@ function TopAgentsTable({ rows, unit, loading, onDrill, t }: { rows: LlmObservab
           <div className="obs-cell-agent">
             {r.agentId && <AgentAvatar url={r.agentAvatarUrl} initial={r.agentInitial} bg={r.agentAvatarBg} />}
             <div className="obs-cell-agent-text">
-              <div className="obs-cell-purpose-label">{r.agentName ?? (r.agentId ? <span className="obs-mono">{r.agentId.slice(0, 12)}</span> : <em>—</em>)}</div>
+              <div className="obs-cell-purpose-label">{r.agentName ?? (r.agentId ? <span className="obs-mono">{r.agentId.slice(0, 12)}</span> : <span>—</span>)}</div>
               {r.agentId && <div className="obs-mono obs-cell-sub">{r.agentId}</div>}
             </div>
           </div>

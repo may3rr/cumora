@@ -597,7 +597,7 @@ export function MobileChatList() {
                 and the gesture-bound `y` transform keep working. */}
             <div className="px-0 pt-1.5 pb-1">
               {byRecency.length === 0 ? (
-                <div className="px-3 py-6 text-center text-[13px] text-ink-300 font-display italic">{t('mclist.empty')}</div>
+                <div className="px-3 py-6 text-center text-[13px] text-ink-300 font-display">{t('mclist.empty')}</div>
               ) : scroller ? (
                 <Virtuoso
                   customScrollParent={scroller}

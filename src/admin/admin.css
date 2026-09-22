@@ -209,7 +209,7 @@
 }
 .admin-tab:hover { background: var(--ink-100); }
 .admin-tab.is-active { background: var(--ink-900); color: var(--cloud); font-weight: 600; }
-.admin-note { font-size: 11px; color: var(--coral-deep); margin-top: 3px; font-style: italic; }
+.admin-note { font-size: 11px; color: var(--coral-deep); margin-top: 3px; }
 
 /* ===== Pills, buttons, toggles ===== */
 .admin-pill {

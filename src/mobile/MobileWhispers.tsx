@@ -117,9 +117,9 @@ function WhisperPreview({ w }: { w: ApiWhisper }) {
   const t = useT()
   const msgs = byIdList[w.id] ?? []
   const last = msgs.length > 0 ? msgs[msgs.length - 1] : null
-  if (!last) return <span className="font-display italic">{t('mwhisp.previewNone')}</span>
+  if (!last) return <span className="font-display">{t('mwhisp.previewNone')}</span>
   const preview = (last.body ?? '').slice(0, 140).replace(/\n/g, ' ').trim()
-  if (!preview) return <span className="font-display italic">…</span>
+  if (!preview) return <span className="font-display">…</span>
   return <span>{preview}</span>
 }
 
@@ -161,7 +161,7 @@ function WhisperListRow({ w, onSelect }: { w: ApiWhisper; onSelect: (id: string)
           ) : (
             <>
               <span className="truncate">{ms[0].name}</span>
-              <span className="text-whisper text-[11px] shrink-0 italic font-normal">↔</span>
+              <span className="text-whisper text-[11px] shrink-0 font-normal">↔</span>
               <span className="truncate">{ms[1].name}</span>
             </>
           )}
@@ -230,7 +230,7 @@ export function MobileWhispersList({ onSelect }: { onSelect: (id: string) => voi
             {t('mwhisp.observing')}
           </span>
         </div>
-        <div className="px-4 pb-2.5 text-[12px] text-ink-500 font-display italic leading-snug">
+        <div className="px-4 pb-2.5 text-[12px] text-ink-500 font-display leading-snug">
           {t('mwhisp.headerSub')}
         </div>
       </div>
@@ -239,12 +239,12 @@ export function MobileWhispersList({ onSelect }: { onSelect: (id: string) => voi
         <PullToRefresh onRefresh={() => useWhispers.getState().loadList()}>
           <div className="pb-2">
             {!loaded && list.length === 0 && (
-              <div className="px-6 py-10 text-center text-[12.5px] text-ink-300 font-display italic">
+              <div className="px-6 py-10 text-center text-[12.5px] text-ink-300 font-display">
                 {t('mwhisp.loading')}
               </div>
             )}
             {loaded && list.length === 0 && (
-              <div className="px-6 py-10 text-center text-[13px] text-ink-500 font-display italic leading-relaxed">
+              <div className="px-6 py-10 text-center text-[13px] text-ink-500 font-display leading-relaxed">
                 {t('mwhisp.empty')}
               </div>
             )}
@@ -320,7 +320,7 @@ export function MobileWhisperRoom({ pairId, onBack }: { pairId: string; onBack: 
             </Pressable>
           </div>
         </header>
-        <div className="flex-1 grid place-items-center text-center px-6 text-[13px] text-ink-500 font-display italic">
+        <div className="flex-1 grid place-items-center text-center px-6 text-[13px] text-ink-500 font-display">
           {t('mwhisp.closed')}
         </div>
       </section>
@@ -355,7 +355,7 @@ export function MobileWhisperRoom({ pairId, onBack }: { pairId: string; onBack: 
               <div className="font-display font-medium text-[15px] text-ink-900 leading-tight truncate" style={{ letterSpacing: '-0.01em' }}>
                 {isGroup ? (whisper.title || ms.map((m) => m.name).join(', ')) : (
                   <>
-                    {ms[0].name} <em className="italic text-whisper-deep" style={{ fontWeight: 400 }}>↔</em> {ms[1].name}
+                    {ms[0].name} <em className="not-italic text-whisper-deep" style={{ fontWeight: 400 }}>↔</em> {ms[1].name}
                   </>
                 )}
               </div>
@@ -377,14 +377,14 @@ export function MobileWhisperRoom({ pairId, onBack }: { pairId: string; onBack: 
           </div>
           <div className="text-[11px] text-whisper-deep flex-1">
             <b className="font-bold tracking-wider uppercase text-[10px]">{t('mwhisp.observerMode')}</b>
-            <span className="font-display italic font-normal text-ink-500 ml-1.5">{t('mwhisp.observerSub')}</span>
+            <span className="font-display font-normal text-ink-500 ml-1.5">{t('mwhisp.observerSub')}</span>
           </div>
         </div>
       </header>
 
       <div className="flex-1 overflow-y-auto py-4 px-3 flex flex-col gap-3 relative">
         {messages.length === 0 && (
-          <div className="text-center text-ink-300 text-[12px] font-display italic py-6">{t('mwhisp.previewNone')}</div>
+          <div className="text-center text-ink-300 text-[12px] font-display py-6">{t('mwhisp.previewNone')}</div>
         )}
         {messages.map((msg) => <Bubble key={msg.id} msg={msg} />)}
       </div>
@@ -392,7 +392,7 @@ export function MobileWhisperRoom({ pairId, onBack }: { pairId: string; onBack: 
       <div className="border-t border-whisper-100 bg-cloud px-3 pt-2.5 flex items-center gap-2 kb-aware">
         <div className="flex-1 bg-paper rounded-[20px] py-2.5 px-3.5 min-h-[40px] flex items-center"
           style={{ border: '1px solid var(--whisper-100)' }}>
-          <span className="text-[13px] text-ink-300 italic flex-1">{t('mwhisp.inject')}</span>
+          <span className="text-[13px] text-ink-300 flex-1">{t('mwhisp.inject')}</span>
         </div>
       </div>
     </section>

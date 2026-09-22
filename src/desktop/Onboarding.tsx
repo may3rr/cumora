@@ -82,7 +82,7 @@ export function Onboarding() {
             ) : (
               <>
                 <div className="text-[13px] font-semibold text-ink-900 mb-1">{t('onboard.runThis')}</div>
-                <div className="text-[11.5px] text-ink-500 mb-2.5 italic font-display">
+                <div className="text-[11.5px] text-ink-500 mb-2.5 font-display">
                   {t('onboard.tokenHint')}
                 </div>
                 <div className="mb-2.5">

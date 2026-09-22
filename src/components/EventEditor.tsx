@@ -233,7 +233,7 @@ export function EventEditor({ event, prefill, onClose }: Props) {
           <h2 className="font-display font-medium text-[20px] tracking-tight">
             {isEdit ? tLabel('event.editEvent', "Edit event") : tLabel('event.newEvent', "New event")}
           </h2>
-          <div className="text-[12.5px] text-ink-500 italic font-display mt-0.5">
+          <div className="text-[12.5px] text-ink-500 font-display mt-0.5">
             {kind === 'agent_task' ? tLabel('event.subtitleAgentTask', "Pick an agent and a time. When it fires, your prompt lands in the conversation and wakes them.") : tLabel('event.subtitlePersonal', "A personal time marker — no agent gets pinged.")}
           </div>
         </div>
@@ -488,7 +488,7 @@ export function EventEditor({ event, prefill, onClose }: Props) {
                     )
                   })}
                   {candidates.length === 0 && (
-                    <div className="text-[12.5px] text-ink-500 italic font-display py-4 text-center">
+                    <div className="text-[12.5px] text-ink-500 font-display py-4 text-center">
                       {tLabel('event.noTeammates', "No teammates available — add an agent first.")}
                     </div>
                   )}
@@ -613,7 +613,7 @@ function Field({ label, hint, children }: { label: string; hint?: string; childr
     <div>
       <label className="block text-[11px] font-bold tracking-wider uppercase text-ink-500 mb-1">{label}</label>
       {hint && (
-        <div className="text-[11.5px] text-ink-300 mb-1.5 font-display italic">{hint}</div>
+        <div className="text-[11.5px] text-ink-300 mb-1.5 font-display">{hint}</div>
       )}
       {children}
     </div>

@@ -114,7 +114,7 @@ export function MembersPopover({ members, anchor, triggerRef, onClose }: Props) 
                     style={{ background: STATUS_COLOR[p.status] ?? 'var(--resting)' }}
                   />
                   {STATUS_LABEL[p.status] ?? 'idle'}
-                  {p.role && <><span className="text-ink-300">·</span><em className="not-italic font-display italic">{p.role}</em></>}
+                  {p.role && <><span className="text-ink-300">·</span><em className="not-italic font-display">{p.role}</em></>}
                 </div>
               </div>
             </button>

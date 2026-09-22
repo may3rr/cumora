@@ -64,7 +64,7 @@ const VARIANT_DEFAULTS: Record<GetDesktopAppLinkVariant, VariantDefaults> = {
     style: { background: 'var(--cloud)', border: '1px solid var(--ink-100)' },
   },
   text: {
-    className: 'text-[12px] text-ink-400 hover:text-ink-700 transition font-display italic underline-offset-2 hover:underline',
+    className: 'text-[12px] text-ink-400 hover:text-ink-700 transition font-display underline-offset-2 hover:underline',
     style: undefined,
   },
 }

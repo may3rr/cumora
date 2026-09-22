@@ -323,7 +323,7 @@ export function AgentEditor({ agent, onClose, onSaved }: Props) {
             <h2 className="font-display font-medium text-[20px] tracking-tight">
               {editing ? t('agent.editAgent', { name: agent!.name }) : t('agent.newAgent')}
             </h2>
-            <div className="text-[12.5px] text-ink-500 italic font-display">
+            <div className="text-[12.5px] text-ink-500 font-display">
               {editing ? t('agent.editSubtitle') : t('agent.newSubtitle')}
             </div>
           </div>
@@ -360,7 +360,7 @@ export function AgentEditor({ agent, onClose, onSaved }: Props) {
               onChange={(e) => setSystemPrompt(e.target.value)}
               rows={5}
               placeholder={t('agent.stylePh')}
-              className="font-display italic"
+              className="font-display"
               style={{ minHeight: 110 }}
             />
           </Field>
@@ -630,7 +630,7 @@ export function AgentEditor({ agent, onClose, onSaved }: Props) {
                 </button>
 
                 {generatingAvatar && (
-                  <div className="text-[11.5px] text-whisper-deep font-display italic leading-[1.5]">
+                  <div className="text-[11.5px] text-whisper-deep font-display leading-[1.5]">
                     {t('agent.composingPortrait', { name: name || t('agent.composingPortraitFallback') })}
                   </div>
                 )}
@@ -727,7 +727,7 @@ function Field({ label, hint, children }: { label: string; hint?: string; childr
   return (
     <div>
       <label className="block text-[11px] font-bold tracking-wider uppercase text-ink-500 mb-1">{label}</label>
-      {hint && <div className="text-[11.5px] text-ink-300 mb-1.5 font-display italic">{hint}</div>}
+      {hint && <div className="text-[11.5px] text-ink-300 mb-1.5 font-display">{hint}</div>}
       {children}
     </div>
   )

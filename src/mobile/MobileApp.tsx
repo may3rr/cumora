@@ -55,7 +55,7 @@ function MobileDocumentPeek({ documentId, onClose }: { documentId: string; onClo
           <div className="w-12 h-12 rounded-[12px] grid place-items-center bg-sky2-50 text-skype-deep">
             <IDoc className="w-5 h-5" />
           </div>
-          <div className="text-[12.5px] font-display italic">{t('mapp.openingDoc')}</div>
+          <div className="text-[12.5px] font-display">{t('mapp.openingDoc')}</div>
         </div>
       </div>
     )

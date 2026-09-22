@@ -101,9 +101,9 @@ export function MobileAgents() {
         style={{ paddingTop: 'max(env(safe-area-inset-top), 12px)', background: 'rgba(250, 252, 254, 0.95)' }}>
         <div className="px-4 pt-2 pb-3">
           <h1 className="font-display font-medium text-[26px] tracking-tight text-ink-900 leading-none">
-            {tLabel('magents.titleLead', 'Your team')} <em className="not-italic text-skype-deep" style={{ fontStyle: 'italic', fontWeight: 400 }}>{tLabel('magents.titleCount', `of ${agents.length}`, { n: agents.length })}</em>
+            {tLabel('magents.titleLead', 'Your team')} <em className="not-italic text-skype-deep" style={{ fontWeight: 400 }}>{tLabel('magents.titleCount', `of ${agents.length}`, { n: agents.length })}</em>
           </h1>
-          <div className="text-[12.5px] text-ink-500 mt-0.5 font-display italic">
+          <div className="text-[12.5px] text-ink-500 mt-0.5 font-display">
             {tLabel('magents.subtitle', 'agents work on their own, loop you in when needed')}
           </div>
         </div>
@@ -126,7 +126,7 @@ export function MobileAgents() {
 
         <div className="space-y-2.5">
           {agents.length === 0 && (
-            <div className="text-center text-ink-300 italic font-display py-12 text-[13px]">
+            <div className="text-center text-ink-300 font-display py-12 text-[13px]">
               {tLabel('magents.empty', 'No agents in this workspace yet. Hire one below.')}
             </div>
           )}
@@ -144,7 +144,7 @@ export function MobileAgents() {
                 <div className="flex-1 min-w-0">
                   <h3 className="font-display font-medium text-[18px] tracking-tight leading-tight" style={{ letterSpacing: '-0.01em' }}>{p.name}</h3>
                   {p.role && (
-                    <div className="font-display italic text-[12px] text-ink-500 leading-tight mb-1">{p.role}</div>
+                    <div className="font-display text-[12px] text-ink-500 leading-tight mb-1">{p.role}</div>
                   )}
                   <div className="inline-flex items-center gap-1.5 text-[10.5px] font-semibold py-0.5 px-2 rounded-full"
                     style={{ background: `${statusColors[p.status]}1F`, color: statusColors[p.status] }}>
@@ -154,7 +154,7 @@ export function MobileAgents() {
                 </div>
               </div>
               {p.bio && (
-                <div className="text-[12px] text-ink-700 leading-[1.5] font-display italic mb-2.5">"{p.bio}"</div>
+                <div className="text-[12px] text-ink-700 leading-[1.5] font-display mb-2.5">"{p.bio}"</div>
               )}
               {(p.tools ?? []).length > 0 && (
                 <div className="flex flex-wrap gap-1">
@@ -177,7 +177,7 @@ export function MobileAgents() {
             </div>
             <div className="text-left">
               <div className="font-display font-medium text-[15px] text-ink-900" style={{ letterSpacing: '-0.01em' }}>{tLabel('magents.hireTitle', 'Hire an agent')}</div>
-              <div className="font-display italic text-[11.5px] text-ink-500">{tLabel('magents.hireSub', 'design a new teammate')}</div>
+              <div className="font-display text-[11.5px] text-ink-500">{tLabel('magents.hireSub', 'design a new teammate')}</div>
             </div>
           </button>
         </div>

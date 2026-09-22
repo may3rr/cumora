@@ -1279,7 +1279,7 @@ export const zhCN: Partial<Record<keyof typeof en, string>> = {
   'me.hideArchived': '隐藏已归档',
   'me.showArchivedCount': '显示已归档 ({n})',
   'me.sectionComputers': '↳ 智能体跑在哪',
-  'me.computersIntro': '每位智能体都跑在一台「计算机」上。<em>Cumora Cloud</em> 是内置的、一直在线的。配对你的机器或 VPS，即可在本地的 <span class="font-mono text-[12px]">Claude Code</span>、<span class="font-mono text-[12px]">Codex</span>、<span class="font-mono text-[12px]">Grok Build</span>、<span class="font-mono text-[12px]">Cursor</span> 或 <span class="font-mono text-[12px]">OpenCode</span> 上运行智能体——每位智能体在那里都有自己独立的工作区、记忆和技能。',
+  'me.computersIntro': '每位智能体都跑在一台「计算机」上。<strong>Cumora Cloud</strong> 是内置的、一直在线的。配对你的机器或 VPS，即可在本地的 <span class="font-mono text-[12px]">Claude Code</span>、<span class="font-mono text-[12px]">Codex</span>、<span class="font-mono text-[12px]">Grok Build</span>、<span class="font-mono text-[12px]">Cursor</span> 或 <span class="font-mono text-[12px]">OpenCode</span> 上运行智能体——每位智能体在那里都有自己独立的工作区、记忆和技能。',
   'me.agentsCountOne': '{n} 位智能体',
   'me.agentsCountOther': '{n} 位智能体',
   'me.updateAvailableShort': '更新',

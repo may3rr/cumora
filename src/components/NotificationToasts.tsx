@@ -397,7 +397,7 @@ function ToastCard({ toast, onClick, onDismiss }: { toast: Toast; onClick: () =>
             <span className="text-[12.5px] font-semibold text-ink-900 truncate">
               {toast.kind === 'calendar.reminder' ? toast.conversationTitle : (author?.name ?? toast.authorId)}
             </span>
-            <span className="text-[10.5px] text-ink-300 italic font-display truncate">
+            <span className="text-[10.5px] text-ink-300 font-display truncate">
               {toast.kind === 'calendar.reminder' ? t('notif.calendarReminder') : toast.conversationTitle}
             </span>
             {toast.count > 1 && (

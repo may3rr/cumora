@@ -144,10 +144,10 @@ export function ThreadDrawer() {
           {t('thread.replies')}
         </div>
 
-        {loading && <div className="text-[12px] text-ink-400 italic">{t('thread.loading')}</div>}
+        {loading && <div className="text-[12px] text-ink-400">{t('thread.loading')}</div>}
         {err && <div className="text-[12px] text-coral-deep">{err}</div>}
         {!loading && !err && visibleReplies.length === 0 && (
-          <div className="text-[12px] text-ink-400 italic">{t('thread.empty')}</div>
+          <div className="text-[12px] text-ink-400">{t('thread.empty')}</div>
         )}
         {visibleReplies.map((m) => {
           const a = byId[m.authorId] ?? { ...fallbackAuthor, id: m.authorId, name: m.authorId, initial: (m.authorId[0] ?? '?').toUpperCase() }

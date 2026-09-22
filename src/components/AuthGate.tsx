@@ -119,7 +119,7 @@ export function AuthGate({ children, unauthFallback }: AuthGateProps) {
     // login → main on a valid token reload.
     return (
       <div
-        className="fixed inset-0 grid place-items-center text-ink-300 font-display italic text-[13px]"
+        className="fixed inset-0 grid place-items-center text-ink-300 font-display text-[13px]"
         style={{ background: 'var(--paper)' }}
       ><WindowDragStrip />loading…</div>
     )

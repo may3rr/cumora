@@ -102,7 +102,7 @@ function AgentCard({ p, onEdit, onDelete }: {
         <Avatar p={p} size={56} statusOverride={displayStatus} />
         <div className="flex-1 min-w-0">
           <h3 className="font-display font-medium text-[20px] tracking-tight leading-tight">{p.name}</h3>
-          <div className="font-display italic font-normal text-[12.5px] text-ink-500 mb-1.5">{p.role}</div>
+          <div className="font-display font-normal text-[12.5px] text-ink-500 mb-1.5">{p.role}</div>
           <div className="flex flex-nowrap items-center gap-1.5 min-w-0">
             <div className="inline-flex items-center gap-1.5 text-[11px] font-semibold py-0.5 px-2 rounded-full shrink-0"
               style={{
@@ -117,7 +117,7 @@ function AgentCard({ p, onEdit, onDelete }: {
               title={hostOffline ? t('agents.hostOfflineTip', { host: hostLabel }) : t('agents.hostRunsOn', { host: hostLabel })}>
               <span className="shrink-0">{hostIcon}</span>
               <span className="min-w-0 truncate">{hostLabel}</span>
-              {hostOffline && <span className="italic text-ink-400 shrink-0">{t('agents.hostOfflineSuffix')}</span>}
+              {hostOffline && <span className="text-ink-400 shrink-0">{t('agents.hostOfflineSuffix')}</span>}
             </div>
             {engineName && (
               <div
@@ -132,7 +132,7 @@ function AgentCard({ p, onEdit, onDelete }: {
         </div>
       </div>
 
-      <div className="text-[12.5px] text-ink-700 leading-[1.55] font-display italic font-normal mb-3.5 line-clamp-3">
+      <div className="text-[12.5px] text-ink-700 leading-[1.55] font-display font-normal mb-3.5 line-clamp-3">
         "{p.bio || p.systemPrompt || '—'}"
       </div>
 
@@ -207,7 +207,7 @@ function HireCard({ onClick }: { onClick: () => void }) {
         <div className="font-display font-medium text-[18px] text-ink-900 mb-1.5" style={{ letterSpacing: '-0.01em' }}>
           {t('agents.addAgent')}
         </div>
-        <div className="font-display italic font-normal text-[12.5px] text-ink-500 max-w-[200px] mx-auto leading-[1.5]">
+        <div className="font-display font-normal text-[12.5px] text-ink-500 max-w-[200px] mx-auto leading-[1.5]">
           {t('agents.addAgentSub')}
         </div>
       </div>
@@ -248,7 +248,7 @@ function ConfirmOffboard({ p, onCancel, onConfirmed }: {
         <p className="text-[13px] text-ink-700 leading-[1.6] mb-3">
           {t('agents.offboardBody1', { name: p.name })}
         </p>
-        <p className="text-[12.5px] text-ink-500 leading-[1.55] font-display italic mb-4">
+        <p className="text-[12.5px] text-ink-500 leading-[1.55] font-display mb-4">
           {t('agents.offboardBody2')}
         </p>
         {err && (
@@ -288,7 +288,7 @@ function FormerAgentCard({ p, onRehire }: { p: Participant; onRehire: (p: Partic
       </div>
       <div className="flex-1 min-w-0">
         <div className="font-bold text-[14px] text-ink-700 truncate">{p.name}</div>
-        <div className="text-[11px] text-ink-500 italic font-display">{p.role} · {departed}</div>
+        <div className="text-[11px] text-ink-500 font-display">{p.role} · {departed}</div>
       </div>
       <button
         type="button"
@@ -348,9 +348,9 @@ export function AgentsView() {
         <div className="mb-6 flex items-end gap-4">
           <div className="flex-1">
             <h1 className="font-display font-medium text-[36px] tracking-tight text-ink-900 mb-1" style={{ letterSpacing: '-0.025em' }}>
-              {t('agents.teamHeadline')} <em className="italic text-skype-deep" style={{ fontWeight: 400 }}>{t('agents.teamCountEm', { count: list.length })}</em>
+              {t('agents.teamHeadline')} <em className="not-italic text-skype-deep" style={{ fontWeight: 400 }}>{t('agents.teamCountEm', { count: list.length })}</em>
             </h1>
-            <div className="font-display italic font-normal text-[15px] text-ink-500">
+            <div className="font-display font-normal text-[15px] text-ink-500">
               {t('agents.teamSubtitle')}
             </div>
           </div>
@@ -404,9 +404,9 @@ export function AgentsView() {
         {departed.length > 0 && (
           <div className="mt-10 mb-2">
             <h2 className="font-display font-medium text-[20px] tracking-tight text-ink-700 mb-1.5" style={{ letterSpacing: '-0.02em' }}>
-              {t('agents.formerHeadline')} <em className="italic text-ink-500" style={{ fontWeight: 400, fontSize: '0.85em' }}>{t('agents.formerCount', { count: departed.length })}</em>
+              {t('agents.formerHeadline')} <em className="not-italic text-ink-500" style={{ fontWeight: 400, fontSize: '0.85em' }}>{t('agents.formerCount', { count: departed.length })}</em>
             </h2>
-            <div className="font-display italic font-normal text-[13px] text-ink-500 mb-4">
+            <div className="font-display font-normal text-[13px] text-ink-500 mb-4">
               {t('agents.formerSubtitle')}
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -420,7 +420,7 @@ export function AgentsView() {
             <h2 className="font-display font-medium text-[24px] tracking-tight text-ink-900 mb-1.5" style={{ letterSpacing: '-0.02em' }}>
               {t('agents.humansHeadline')}
             </h2>
-            <div className="font-display italic font-normal text-[13.5px] text-ink-500 mb-5">
+            <div className="font-display font-normal text-[13.5px] text-ink-500 mb-5">
               {t('agents.humansSubtitle')}
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">

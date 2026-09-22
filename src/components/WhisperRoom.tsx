@@ -221,7 +221,7 @@ export function WhisperRoom({ pairId }: { pairId: string }) {
             <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" />
           </svg>
           <b className="font-semibold tracking-wide uppercase text-[9.5px]">{t('whisper.observerMode')}</b>
-          <span className="font-display italic text-ink-500 text-[11px]">{t('whisper.observerHint')}</span>
+          <span className="font-display text-ink-500 text-[11px]">{t('whisper.observerHint')}</span>
         </div>
       </div>
 
@@ -253,7 +253,7 @@ export function WhisperRoom({ pairId }: { pairId: string }) {
               </>
             )}
           </h2>
-          <div className="text-[11.5px] text-ink-500 mt-0.5 truncate font-display italic">
+          <div className="text-[11.5px] text-ink-500 mt-0.5 truncate font-display">
             {isGroup ? t('whisper.nAgents', { n: ms.length }) : (whisper.about ?? t('whisper.privateThread'))}
             <span className="not-italic text-ink-300"> · </span>
             <span className="not-italic text-ink-300">
@@ -267,7 +267,7 @@ export function WhisperRoom({ pairId }: { pairId: string }) {
       <div className="overflow-y-auto py-3 px-6 pb-3 flex flex-col gap-3 relative">
         <Divider label={t('whisper.openedAt', { time: new Date(whisper.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) })} />
         {messages.length === 0 && (
-          <div className="text-center text-ink-300 text-[12px] font-display italic py-6">{t('whisper.noMessages')}</div>
+          <div className="text-center text-ink-300 text-[12px] font-display py-6">{t('whisper.noMessages')}</div>
         )}
         {messages.map((msg) => <Bubble key={msg.id} msg={msg} />)}
       </div>
@@ -322,7 +322,7 @@ export function WhisperInspector({ pairId }: { pairId: string }) {
         <h3 className="font-display font-medium text-[20px] tracking-tight mb-1.5">
           {whisper.about ?? whisper.title ?? 'private thread'}
         </h3>
-        <div className="font-display italic text-[12px] leading-[1.6] text-ink-500 px-1.5">
+        <div className="font-display text-[12px] leading-[1.6] text-ink-500 px-1.5">
           opened {new Date(whisper.createdAt).toLocaleString()}
         </div>
       </div>
@@ -339,7 +339,7 @@ export function WhisperInspector({ pairId }: { pairId: string }) {
             <div key={p.id} className="text-center py-2.5 px-2 bg-cloud rounded-[10px]" style={{ border: '1px solid var(--whisper-100)' }}>
               <Avatar p={p} size={36} showStatus={false} />
               <div className="text-[12px] font-bold text-ink-900 mt-1.5">{p.name}</div>
-              {p.role && <div className="font-display italic text-[10px] text-ink-500 mb-2">{p.role}</div>}
+              {p.role && <div className="font-display text-[10px] text-ink-500 mb-2">{p.role}</div>}
               <div className="font-display text-[22px] font-medium text-whisper-deep leading-none" style={{ letterSpacing: '-0.02em' }}>{turnsByAuthor[p.id] ?? 0}</div>
               <div className="text-[9px] font-bold text-ink-300 uppercase tracking-wider mt-0.5">turns</div>
             </div>

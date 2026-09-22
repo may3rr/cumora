@@ -73,7 +73,7 @@ function ComingSoonPop({ onClose }: { onClose: () => void }) {
           >✨</span>
           <div className="min-w-0">
             <div className="text-[12.5px] font-semibold text-ink-900 leading-tight">{t('chat.comingSoon')}</div>
-            <div className="text-[11.5px] text-ink-500 font-display italic leading-snug mt-0.5">
+            <div className="text-[11.5px] text-ink-500 font-display leading-snug mt-0.5">
               {t('chat.conveneSoon')}
             </div>
           </div>
@@ -238,7 +238,7 @@ function ChatHeader({
               <button
                 type="button"
                 onClick={startEditTopic}
-                className="text-ink-300 italic font-display hover:text-skype-deep transition shrink-0"
+                className="text-ink-300 font-display hover:text-skype-deep transition shrink-0"
                 title={t('chat.setTopic')}
               >{t('chat.addTopic')}</button>
             </>
@@ -259,7 +259,7 @@ function ChatHeader({
               if (e.key === 'Escape') setEditingTopic(false)
             }}
             placeholder={t('chat.topicPlaceholder')}
-            className="mt-0.5 w-full bg-transparent text-[12px] text-ink-700 italic placeholder:text-ink-300 outline-none border-b border-sky2-200 focus:border-skype-deep transition pb-0.5"
+            className="mt-0.5 w-full bg-transparent text-[12px] text-ink-700 placeholder:text-ink-300 outline-none border-b border-sky2-200 focus:border-skype-deep transition pb-0.5"
             maxLength={200}
           />
         ) : c.topic ? (
@@ -270,7 +270,7 @@ function ChatHeader({
             // `truncate`'s overflow:hidden chops the slanted edge of the
             // final character. pr-1 + max-w-full keeps the layout
             // honest while leaving room for the slant.
-            className="mt-0.5 text-[12px] text-ink-500 italic hover:text-skype-deep transition truncate text-left max-w-full font-display pr-1 block leading-[1.5]"
+            className="mt-0.5 text-[12px] text-ink-500 hover:text-skype-deep transition truncate text-left max-w-full font-display pr-1 block leading-[1.5]"
             title={t('chat.editTopic')}
           >
             {c.topic}
@@ -1053,7 +1053,7 @@ export function Composer({
           </div>
         )}
         {uploading && (
-          <div className="mb-2 text-[11.5px] text-ink-500 italic">{t('chat.uploading')}</div>
+          <div className="mb-2 text-[11.5px] text-ink-500">{t('chat.uploading')}</div>
         )}
         {uploadError && (
           <div className="mb-2 text-[11.5px] py-1 px-2 rounded-md text-coral-deep bg-coral-soft inline-block max-w-full truncate">
@@ -1311,7 +1311,7 @@ function ThreadLoader() {
             ))}
           </div>
         </div>
-        <div className="font-display italic text-[13px] text-ink-500 tracking-tight">
+        <div className="font-display text-[13px] text-ink-500 tracking-tight">
           {t('chat.gathering')}
         </div>
       </div>
@@ -1672,12 +1672,12 @@ function EmptyConversationState() {
             >
               {t('chat.emptyTitle')}
             </h2>
-            <p className="mt-2.5 font-display italic text-[14px] text-ink-500 leading-relaxed max-w-[360px]">
+            <p className="mt-2.5 font-display text-[14px] text-ink-500 leading-relaxed max-w-[360px]">
               {t('chat.emptySub')}
             </p>
 
             {total > 0 && (
-              <div className="mt-6 text-[12px] text-ink-400 font-display italic flex items-center gap-1.5">
+              <div className="mt-6 text-[12px] text-ink-400 font-display flex items-center gap-1.5">
                 <span className="text-gold leading-none not-italic" style={{ fontSize: 10 }}>★</span>
                 <b className="not-italic text-ink-700 font-semibold tabular-nums">{total}</b>
                 <span>{t(total === 1 ? 'chat.threadWaiting' : 'chat.threadsWaiting')}</span>
