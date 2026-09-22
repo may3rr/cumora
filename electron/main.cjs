@@ -1665,6 +1665,11 @@ function registerDevShortcuts() {
 // `window-all-closed` keeps the process alive but never re-shows or
 // re-creates the window.
 app.on('activate', () => {
+  // `activate` can fire BEFORE `ready` on macOS (Dock click while the app
+  // is still launching). `screen`/`BrowserWindow` aren't usable yet, and
+  // whenReady() already calls createWindow() unconditionally — so an
+  // early activate has nothing to do.
+  if (!app.isReady()) return
   scheduleRegularDockRepair()
   if (!mainWindow || mainWindow.isDestroyed()) {
     createWindow()
